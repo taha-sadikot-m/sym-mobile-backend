@@ -1,0 +1,386 @@
+[
+  {
+    "slug": "homework-ban",
+    "category": "education",
+    "title": "Homework should be abolished in schools",
+    "context": "Whether take-home assignments help or harm learning and wellbeing.",
+    "for_points": [
+      "excess homework increases stress and cuts into sleep",
+      "learning gains from homework are small for younger students",
+      "time at home is better spent on reading, play, and family"
+    ],
+    "against_points": [
+      "homework builds independent study habits early",
+      "practice outside class consolidates what was taught",
+      "it shows parents what their children are learning"
+    ]
+  },
+  {
+    "slug": "uniforms",
+    "category": "education",
+    "title": "School uniforms should be mandatory",
+    "context": "Equality and discipline versus self-expression.",
+    "for_points": [
+      "uniforms reduce visible income differences between students",
+      "they cut daily distraction and peer pressure over clothing",
+      "a shared identity improves school belonging"
+    ],
+    "against_points": [
+      "uniforms suppress self-expression during formative years",
+      "they add a recurring cost for low-income families",
+      "there is little hard evidence they improve results"
+    ]
+  },
+  {
+    "slug": "online-learning",
+    "category": "education",
+    "title": "Online learning is as effective as classroom learning",
+    "context": "The post-pandemic debate on digital education.",
+    "for_points": [
+      "online courses let students learn at their own pace",
+      "they open access to top teachers regardless of location",
+      "recorded lessons can be reviewed as often as needed"
+    ],
+    "against_points": [
+      "classrooms build social skills that screens cannot",
+      "the digital divide leaves poorer students behind",
+      "motivation and attention drop without in-person structure"
+    ]
+  },
+  {
+    "slug": "exams",
+    "category": "education",
+    "title": "Board exams should be replaced by continuous assessment",
+    "context": "One high-stakes test versus year-round evaluation.",
+    "for_points": [
+      "a single exam rewards memorisation over understanding",
+      "continuous assessment reduces one-day pressure and anxiety",
+      "it gives teachers early signals to help struggling students"
+    ],
+    "against_points": [
+      "standard exams are the fairest common benchmark",
+      "continuous marks are easier to inflate or bias",
+      "students learn to perform under pressure, a real-world skill"
+    ]
+  },
+  {
+    "slug": "ai-classroom",
+    "category": "technology",
+    "title": "AI tools should be allowed in classrooms",
+    "context": "Tools like chatbots as tutors or as shortcuts.",
+    "for_points": [
+      "AI tutors give every student personalised help",
+      "students must learn to use the tools they will use at work",
+      "teachers save time on routine marking and planning"
+    ],
+    "against_points": [
+      "AI makes it easy to skip the thinking that builds skill",
+      "it produces confident but wrong answers students cannot detect",
+      "it widens the gap between those with and without access"
+    ]
+  },
+  {
+    "slug": "social-media-age",
+    "category": "technology",
+    "title": "Social media should be banned for under-16s",
+    "context": "Child safety and mental health versus access and freedom.",
+    "for_points": [
+      "heavy social media use is linked to teenage anxiety",
+      "algorithms are designed to maximise compulsive use",
+      "children cannot meaningfully consent to data collection"
+    ],
+    "against_points": [
+      "bans are easily bypassed and push teens to riskier platforms",
+      "social media connects isolated young people to support",
+      "education and parental tools work better than prohibition"
+    ]
+  },
+  {
+    "slug": "remote-work",
+    "category": "technology",
+    "title": "Remote work is better than office work",
+    "context": "Productivity, wellbeing, and collaboration after 2020.",
+    "for_points": [
+      "remote work removes hours of commuting each week",
+      "it widens hiring beyond one city",
+      "many studies show stable or higher individual productivity"
+    ],
+    "against_points": [
+      "spontaneous collaboration and mentoring suffer at a distance",
+      "young employees lose the learning that happens in person",
+      "the boundary between work and home blurs into burnout"
+    ]
+  },
+  {
+    "slug": "data-privacy",
+    "category": "technology",
+    "title": "Governments should be allowed to access encrypted messages",
+    "context": "National security versus digital privacy.",
+    "for_points": [
+      "criminals and terrorists hide planning behind encryption",
+      "lawful access with warrants keeps oversight in place",
+      "platforms already scan for some illegal content"
+    ],
+    "against_points": [
+      "a backdoor for governments is a backdoor for hackers",
+      "mass access chills free speech and journalism",
+      "determined criminals will simply switch to other tools"
+    ]
+  },
+  {
+    "slug": "plastic-ban",
+    "category": "environment",
+    "title": "Single-use plastics should be banned completely",
+    "context": "Pollution versus cost and convenience.",
+    "for_points": [
+      "single-use plastic is a major source of ocean pollution",
+      "alternatives already exist for most everyday uses",
+      "bans change habits faster than voluntary campaigns"
+    ],
+    "against_points": [
+      "some plastics are vital for hygiene and medical safety",
+      "alternatives can have higher carbon footprints",
+      "better waste management solves the problem at the source"
+    ]
+  },
+  {
+    "slug": "nuclear",
+    "category": "environment",
+    "title": "Nuclear energy is the answer to climate change",
+    "context": "Low-carbon baseload power versus risk and cost.",
+    "for_points": [
+      "nuclear provides reliable, near-zero-carbon baseload power",
+      "it uses very little land per unit of energy",
+      "modern reactor designs are far safer than older ones"
+    ],
+    "against_points": [
+      "new plants take over a decade and huge budgets to build",
+      "long-term waste storage is still unresolved",
+      "solar and wind are now cheaper and faster to deploy"
+    ]
+  },
+  {
+    "slug": "carbon-tax",
+    "category": "environment",
+    "title": "Every country should adopt a carbon tax",
+    "context": "Pricing emissions to change behaviour.",
+    "for_points": [
+      "a carbon price makes polluters pay the true cost",
+      "it rewards clean innovation without picking winners",
+      "revenue can be returned to households as a dividend"
+    ],
+    "against_points": [
+      "carbon taxes hit low-income households hardest",
+      "industries simply relocate to countries without the tax",
+      "developing nations should not pay for emissions they did not cause"
+    ]
+  },
+  {
+    "slug": "meat-tax",
+    "category": "environment",
+    "title": "Meat should be taxed to protect the environment",
+    "context": "Livestock emissions and food choice.",
+    "for_points": [
+      "livestock is a major source of methane and deforestation",
+      "a tax nudges diets without banning anything",
+      "revenue can fund sustainable farming"
+    ],
+    "against_points": [
+      "a meat tax is regressive and hits poorer families",
+      "diet is a cultural and personal choice",
+      "farm efficiency improvements cut emissions without new taxes"
+    ]
+  },
+  {
+    "slug": "voting-age",
+    "category": "politics",
+    "title": "The voting age should be lowered to 16",
+    "context": "Youth participation in democracy.",
+    "for_points": [
+      "16-year-olds pay taxes and live with long-term policy effects",
+      "voting early builds a lifelong habit of participation",
+      "young people are well informed through school and media"
+    ],
+    "against_points": [
+      "most 16-year-olds are still developing independent judgement",
+      "they are more easily influenced by parents and teachers",
+      "other adult rights begin at 18 for good reason"
+    ]
+  },
+  {
+    "slug": "compulsory-voting",
+    "category": "politics",
+    "title": "Voting should be compulsory",
+    "context": "Turnout and legitimacy versus freedom of choice.",
+    "for_points": [
+      "compulsory voting makes results reflect the whole population",
+      "it reduces the influence of extreme, motivated minorities",
+      "it works in countries such as Australia"
+    ],
+    "against_points": [
+      "the freedom to vote includes the freedom not to",
+      "forced voters may cast random or uninformed ballots",
+      "governments should earn turnout, not mandate it"
+    ]
+  },
+  {
+    "slug": "unsc-reform",
+    "category": "politics",
+    "title": "The UN Security Council veto should be abolished",
+    "context": "Reforming the five permanent members’ power.",
+    "for_points": [
+      "the veto lets one country block action on atrocities",
+      "the 1945 power structure no longer reflects the world",
+      "abolition would restore the Council’s credibility"
+    ],
+    "against_points": [
+      "the veto keeps major powers inside the UN system",
+      "without it, powers may ignore the Council entirely",
+      "reform should expand membership rather than remove the veto"
+    ]
+  },
+  {
+    "slug": "term-limits",
+    "category": "politics",
+    "title": "All elected leaders should face strict term limits",
+    "context": "Preventing entrenched power.",
+    "for_points": [
+      "term limits stop leaders entrenching personal power",
+      "they bring fresh ideas into government",
+      "they reduce long-term corruption networks"
+    ],
+    "against_points": [
+      "term limits remove experienced, effective leaders",
+      "voters, not rules, should decide who governs",
+      "lame-duck leaders lose accountability in their final term"
+    ]
+  },
+  {
+    "slug": "ubi",
+    "category": "economy",
+    "title": "Governments should provide a universal basic income",
+    "context": "A guaranteed income in an age of automation.",
+    "for_points": [
+      "UBI is a safety net as automation replaces jobs",
+      "it removes bureaucracy from targeted welfare",
+      "pilots show recipients invest in education and work"
+    ],
+    "against_points": [
+      "UBI is extremely expensive at national scale",
+      "it may reduce the incentive to work",
+      "targeted support helps the poorest more per rupee spent"
+    ]
+  },
+  {
+    "slug": "four-day-week",
+    "category": "economy",
+    "title": "A four-day work week should be standard",
+    "context": "Productivity, wellbeing, and business costs.",
+    "for_points": [
+      "trials show productivity holds while wellbeing rises",
+      "it reduces burnout and sick leave",
+      "it can spread work and cut commuting emissions"
+    ],
+    "against_points": [
+      "many services cannot simply close for a day",
+      "small businesses face higher costs to keep cover",
+      "compressed hours can raise daily stress"
+    ]
+  },
+  {
+    "slug": "billionaire-tax",
+    "category": "economy",
+    "title": "Extreme wealth should be taxed far more heavily",
+    "context": "Inequality versus investment and growth.",
+    "for_points": [
+      "extreme inequality concentrates political influence",
+      "wealth taxes can fund health and education",
+      "much of top wealth grows untaxed as unrealised gains"
+    ],
+    "against_points": [
+      "wealth taxes are hard to value and easy to avoid",
+      "capital and founders may leave the country",
+      "several European countries scrapped them as ineffective"
+    ]
+  },
+  {
+    "slug": "crypto",
+    "category": "economy",
+    "title": "Cryptocurrency does more harm than good",
+    "context": "Financial innovation versus speculation and crime.",
+    "for_points": [
+      "crypto markets are dominated by speculation and scams",
+      "mining consumes large amounts of energy",
+      "anonymity helps fraud, ransomware, and money laundering"
+    ],
+    "against_points": [
+      "crypto gives the unbanked access to financial services",
+      "blockchain enables transparent, programmable payments",
+      "regulation, not rejection, can address the risks"
+    ]
+  },
+  {
+    "slug": "zoos",
+    "category": "society",
+    "title": "Zoos should be banned",
+    "context": "Animal welfare versus conservation.",
+    "for_points": [
+      "captivity causes stress and abnormal behaviour in many species",
+      "animals exist for entertainment rather than their own welfare",
+      "documentaries and sanctuaries can educate instead"
+    ],
+    "against_points": [
+      "accredited zoos run vital breeding programmes",
+      "they fund field conservation and research",
+      "seeing animals in person builds public support for protection"
+    ]
+  },
+  {
+    "slug": "celebrity-role",
+    "category": "society",
+    "title": "Celebrities have a duty to be role models",
+    "context": "Fame, influence, and personal freedom.",
+    "for_points": [
+      "celebrities shape the values of millions of young fans",
+      "influence that is paid for comes with responsibility",
+      "positive role models change behaviour at scale"
+    ],
+    "against_points": [
+      "fame does not oblige anyone to model a lifestyle",
+      "parents and teachers are the right role models",
+      "expecting perfection leads to hypocrisy and backlash"
+    ]
+  },
+  {
+    "slug": "space-spending",
+    "category": "society",
+    "title": "Space exploration is a waste of money",
+    "context": "Priorities on Earth versus investment in the future.",
+    "for_points": [
+      "funds are urgently needed for poverty and health on Earth",
+      "private companies can fund space themselves",
+      "returns from crewed missions are uncertain"
+    ],
+    "against_points": [
+      "space research produced GPS, weather forecasting, and medical tech",
+      "satellites are essential for climate monitoring",
+      "exploration inspires students into science careers"
+    ]
+  },
+  {
+    "slug": "death-penalty",
+    "category": "society",
+    "title": "The death penalty should be abolished worldwide",
+    "context": "Justice, deterrence, and irreversible error.",
+    "for_points": [
+      "wrongful convictions cannot be undone after execution",
+      "evidence for deterrence is weak",
+      "it is applied unequally across class and race"
+    ],
+    "against_points": [
+      "some crimes are so severe that only the highest penalty is just",
+      "it gives closure to victims’ families",
+      "nations should decide their own criminal justice"
+    ]
+  }
+]

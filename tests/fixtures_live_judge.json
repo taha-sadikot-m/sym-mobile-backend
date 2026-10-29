@@ -1,0 +1,453 @@
+{
+ "full": {
+  "turns": [
+   {
+    "id": "t0",
+    "slotIndex": 0,
+    "speakerId": "11",
+    "side": "for",
+    "phase": "opening",
+    "role": "speech",
+    "text": "First, homework should be abolished because it adds stress. For example, a study from Stanford found students lose sleep. This shows the burden is real. Second, family time matters.",
+    "input": "voice",
+    "usedMs": 110000,
+    "allowedMs": 120000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   },
+   {
+    "id": "t1",
+    "slotIndex": 1,
+    "speakerId": "22",
+    "side": "against",
+    "phase": "opening",
+    "role": "speech",
+    "text": "My opponent says homework causes stress, however that ignores the habits it builds. Research shows practice improves memory, which means homework helps learning. Um, basically it works.",
+    "input": "voice",
+    "usedMs": 90000,
+    "allowedMs": 120000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   },
+   {
+    "id": "t2",
+    "slotIndex": 2,
+    "speakerId": "11",
+    "side": "for",
+    "phase": "rebuttal",
+    "role": "speech",
+    "text": "They claim habits come from homework, but habits come from reading for pleasure. According to data from Finland, little homework still means strong results. Therefore the burden is not worth it.",
+    "input": "voice",
+    "usedMs": 120500,
+    "allowedMs": 120000,
+    "cutOff": true,
+    "createdAt": "2026-10-18T00:00:00Z"
+   },
+   {
+    "id": "t3",
+    "slotIndex": 3,
+    "speakerId": "22",
+    "side": "against",
+    "phase": "rebuttal",
+    "role": "speech",
+    "text": "Finland is different. Teachers there are trained differently.",
+    "input": "voice",
+    "usedMs": 40000,
+    "allowedMs": 120000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   },
+   {
+    "id": "t4",
+    "slotIndex": 4,
+    "speakerId": "22",
+    "side": "against",
+    "phase": "closing",
+    "role": "speech",
+    "text": "In conclusion, homework builds discipline and we have shown it helps memory.",
+    "input": "voice",
+    "usedMs": 50000,
+    "allowedMs": 60000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   },
+   {
+    "id": "t5",
+    "slotIndex": 5,
+    "speakerId": "11",
+    "side": "for",
+    "phase": "closing",
+    "role": "speech",
+    "text": "To summarise: stress is real, the benefit is small, and better habits come from choice. Thank you.",
+    "input": "text",
+    "usedMs": 55000,
+    "allowedMs": 60000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   }
+  ],
+  "judge": {
+   "winnerId": "11",
+   "margin": 12,
+   "scores": [
+    {
+     "userId": "11",
+     "total": 81,
+     "categories": [
+      {
+       "id": "argument",
+       "label": "Argument",
+       "score": 74,
+       "why": "26 words per turn on average, 3 explicit reasons."
+      },
+      {
+       "id": "rebuttal",
+       "label": "Rebuttal & clash",
+       "score": 63,
+       "why": "Answered the opponent directly in 1 of 2 replies."
+      },
+      {
+       "id": "evidence",
+       "label": "Evidence & reasoning",
+       "score": 86,
+       "why": "4 examples or pieces of evidence across your turns."
+      },
+      {
+       "id": "structure",
+       "label": "Structure",
+       "score": 95,
+       "why": "Opening delivered, closing summarised the case, 3 signposts."
+      },
+      {
+       "id": "delivery",
+       "label": "Delivery & clarity",
+       "score": 80,
+       "why": "About 16 words per minute, 0 filler words."
+      },
+      {
+       "id": "time",
+       "label": "Use of time",
+       "score": 86,
+       "why": "Used 95% of your speaking time, cut off 1 time."
+      }
+     ]
+    },
+    {
+     "userId": "22",
+     "total": 69,
+     "categories": [
+      {
+       "id": "argument",
+       "label": "Argument",
+       "score": 59,
+       "why": "16 words per turn on average, 1 explicit reason."
+      },
+      {
+       "id": "rebuttal",
+       "label": "Rebuttal & clash",
+       "score": 68,
+       "why": "Answered the opponent directly in 1 of 2 replies."
+      },
+      {
+       "id": "evidence",
+       "label": "Evidence & reasoning",
+       "score": 48,
+       "why": "1 example or piece of evidence across your turns."
+      },
+      {
+       "id": "structure",
+       "label": "Structure",
+       "score": 85,
+       "why": "Opening delivered, closing summarised the case, 1 signpost."
+      },
+      {
+       "id": "delivery",
+       "label": "Delivery & clarity",
+       "score": 76,
+       "why": "About 16 words per minute, 1 filler word."
+      },
+      {
+       "id": "time",
+       "label": "Use of time",
+       "score": 78,
+       "why": "Used 60% of your speaking time."
+      }
+     ]
+    }
+   ],
+   "reasons": [
+    "Riya wins by 12 points (81 to 69).",
+    "The biggest difference was evidence & reasoning: 4 examples or pieces of evidence across your turns.",
+    "Kabir's strongest area was structure (85/100).",
+    "Only words spoken inside each turn's time limit were judged."
+   ],
+   "clashes": [
+    {
+     "title": "Riya's point on “abolished”",
+     "winnerId": "22",
+     "why": "Kabir answered it directly and backed the answer with reasoning or evidence."
+    },
+    {
+     "title": "Kabir's point on “basically”",
+     "winnerId": "11",
+     "why": "Riya answered it directly and backed the answer with reasoning or evidence."
+    },
+    {
+     "title": "Riya's point on “according”",
+     "winnerId": "11",
+     "why": "Kabir did not respond to it, so the point stood."
+    }
+   ]
+  }
+ },
+ "oneSided": {
+  "turns": [
+   {
+    "id": "t0",
+    "slotIndex": 0,
+    "speakerId": "11",
+    "side": "for",
+    "phase": "opening",
+    "role": "speech",
+    "text": "Homework should go.",
+    "input": "voice",
+    "usedMs": 5000,
+    "allowedMs": 120000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   }
+  ],
+  "judge": {
+   "winnerId": "11",
+   "margin": 27,
+   "scores": [
+    {
+     "userId": "11",
+     "total": 42,
+     "categories": [
+      {
+       "id": "argument",
+       "label": "Argument",
+       "score": 40,
+       "why": "3 words per turn on average, 0 explicit reasons."
+      },
+      {
+       "id": "rebuttal",
+       "label": "Rebuttal & clash",
+       "score": 35,
+       "why": "No opponent turn to answer yet."
+      },
+      {
+       "id": "evidence",
+       "label": "Evidence & reasoning",
+       "score": 34,
+       "why": "0 examples or pieces of evidence across your turns."
+      },
+      {
+       "id": "structure",
+       "label": "Structure",
+       "score": 38,
+       "why": "Opening delivered, no closing, 0 signposts."
+      },
+      {
+       "id": "delivery",
+       "label": "Delivery & clarity",
+       "score": 62,
+       "why": "About 36 words per minute, 0 filler words."
+      },
+      {
+       "id": "time",
+       "label": "Use of time",
+       "score": 42,
+       "why": "Used 4% of your speaking time."
+      }
+     ]
+    },
+    {
+     "userId": "22",
+     "total": 15,
+     "categories": [
+      {
+       "id": "argument",
+       "label": "Argument",
+       "score": 15,
+       "why": "No turns were delivered."
+      },
+      {
+       "id": "rebuttal",
+       "label": "Rebuttal & clash",
+       "score": 15,
+       "why": "No turns were delivered."
+      },
+      {
+       "id": "evidence",
+       "label": "Evidence & reasoning",
+       "score": 15,
+       "why": "No turns were delivered."
+      },
+      {
+       "id": "structure",
+       "label": "Structure",
+       "score": 15,
+       "why": "No turns were delivered."
+      },
+      {
+       "id": "delivery",
+       "label": "Delivery & clarity",
+       "score": 15,
+       "why": "No turns were delivered."
+      },
+      {
+       "id": "time",
+       "label": "Use of time",
+       "score": 15,
+       "why": "No turns were delivered."
+      }
+     ]
+    }
+   ],
+   "reasons": [
+    "Riya wins by 27 points (42 to 15).",
+    "The biggest difference was delivery & clarity: About 36 words per minute, 0 filler words.",
+    "Kabir's strongest area was argument (15/100).",
+    "Only words spoken inside each turn's time limit were judged."
+   ],
+   "clashes": []
+  }
+ },
+ "tie": {
+  "turns": [
+   {
+    "id": "t0",
+    "slotIndex": 0,
+    "speakerId": "11",
+    "side": "for",
+    "phase": "opening",
+    "role": "speech",
+    "text": "Same words here.",
+    "input": "voice",
+    "usedMs": 60000,
+    "allowedMs": 120000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   },
+   {
+    "id": "t1",
+    "slotIndex": 1,
+    "speakerId": "22",
+    "side": "against",
+    "phase": "opening",
+    "role": "speech",
+    "text": "Same words here.",
+    "input": "voice",
+    "usedMs": 60000,
+    "allowedMs": 120000,
+    "cutOff": false,
+    "createdAt": "2026-10-18T00:00:00Z"
+   }
+  ],
+  "judge": {
+   "winnerId": "22",
+   "margin": 6,
+   "scores": [
+    {
+     "userId": "11",
+     "total": 45,
+     "categories": [
+      {
+       "id": "argument",
+       "label": "Argument",
+       "score": 40,
+       "why": "3 words per turn on average, 0 explicit reasons."
+      },
+      {
+       "id": "rebuttal",
+       "label": "Rebuttal & clash",
+       "score": 35,
+       "why": "No opponent turn to answer yet."
+      },
+      {
+       "id": "evidence",
+       "label": "Evidence & reasoning",
+       "score": 34,
+       "why": "0 examples or pieces of evidence across your turns."
+      },
+      {
+       "id": "structure",
+       "label": "Structure",
+       "score": 38,
+       "why": "Opening delivered, no closing, 0 signposts."
+      },
+      {
+       "id": "delivery",
+       "label": "Delivery & clarity",
+       "score": 62,
+       "why": "About 3 words per minute, 0 filler words."
+      },
+      {
+       "id": "time",
+       "label": "Use of time",
+       "score": 60,
+       "why": "Used 50% of your speaking time."
+      }
+     ]
+    },
+    {
+     "userId": "22",
+     "total": 51,
+     "categories": [
+      {
+       "id": "argument",
+       "label": "Argument",
+       "score": 40,
+       "why": "3 words per turn on average, 0 explicit reasons."
+      },
+      {
+       "id": "rebuttal",
+       "label": "Rebuttal & clash",
+       "score": 70,
+       "why": "Answered the opponent directly in 1 of 1 replies."
+      },
+      {
+       "id": "evidence",
+       "label": "Evidence & reasoning",
+       "score": 34,
+       "why": "0 examples or pieces of evidence across your turns."
+      },
+      {
+       "id": "structure",
+       "label": "Structure",
+       "score": 38,
+       "why": "Opening delivered, no closing, 0 signposts."
+      },
+      {
+       "id": "delivery",
+       "label": "Delivery & clarity",
+       "score": 62,
+       "why": "About 3 words per minute, 0 filler words."
+      },
+      {
+       "id": "time",
+       "label": "Use of time",
+       "score": 60,
+       "why": "Used 50% of your speaking time."
+      }
+     ]
+    }
+   ],
+   "reasons": [
+    "Kabir wins by 6 points (51 to 45).",
+    "The biggest difference was rebuttal & clash: Answered the opponent directly in 1 of 1 replies.",
+    "Riya's strongest area was delivery & clarity (62/100).",
+    "Only words spoken inside each turn's time limit were judged."
+   ],
+   "clashes": [
+    {
+     "title": "Riya's point on “words”",
+     "winnerId": "11",
+     "why": "Kabir responded, but without reasoning or evidence, so the point stood."
+    }
+   ]
+  }
+ }
+}

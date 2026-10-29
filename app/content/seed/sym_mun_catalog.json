@@ -1,0 +1,3972 @@
+{
+  "source": "MyMUN committee pages (mymun.com/committees), read 11 Oct 2026. Counts are as MyMUN reported them that day.",
+  "notes": "featured_agendas, caucus_topics and key_frameworks were written for SYM to review; everything else comes from MyMUN.",
+  "committees": [
+    {
+      "id": "unsc",
+      "name": "UN Security Council",
+      "abbr": "UNSC",
+      "category": "Main UN organ",
+      "seat_type": "country",
+      "difficulty": "Advanced",
+      "mymun_upcoming_conferences": 285,
+      "mymun_topic_count": 2814,
+      "typical_seats": 15,
+      "real_body": "15 members: 5 permanent with a veto (China, France, Russia, UK, US) and 10 elected for two years",
+      "decision_rule": "9 of 15 votes, and no permanent member votes no. Abstentions are not vetoes; procedural votes can't be vetoed",
+      "binding": "Decisions bind all UN member states",
+      "themes": [
+        {
+          "theme": "Armed conflicts",
+          "share_pct": 24
+        },
+        {
+          "theme": "Terrorism and extremism",
+          "share_pct": 7
+        },
+        {
+          "theme": "Maritime and border disputes",
+          "share_pct": 6
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": 6
+        },
+        {
+          "theme": "Nuclear weapons and disarmament",
+          "share_pct": 6
+        },
+        {
+          "theme": "Peacekeeping and peacebuilding",
+          "share_pct": 5
+        },
+        {
+          "theme": "Humanitarian crises",
+          "share_pct": 4
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": 2
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "addressing-the-proliferation-of-non-state-armed-groups-in-th",
+          "title": "Addressing the Proliferation of Non-State Armed Groups in the Sahel",
+          "moderated_caucus_topics": [
+            "Financing of armed groups through illicit gold, drugs and kidnapping",
+            "The future of UN and regional peace operations after MINUSMA's withdrawal",
+            "Sanctions regimes versus engagement with transitional military governments",
+            "Protecting civilians and humanitarian access in contested areas"
+          ],
+          "key_frameworks": [
+            "UN Charter Chapter VII",
+            "UNSC Resolution 2690 (2023) ending MINUSMA",
+            "African Union Peace and Security Council communiqués"
+          ]
+        },
+        {
+          "id": "addressing-the-global-proliferation-of-cyber-warfare",
+          "title": "Addressing the Global Proliferation of Cyber Warfare",
+          "moderated_caucus_topics": [
+            "Applying international law and the UN Charter to state cyber operations",
+            "Attribution of attacks and the threshold for an armed attack",
+            "Protecting critical infrastructure such as hospitals, grids and undersea cables",
+            "Ransomware groups operating from states that will not extradite"
+          ],
+          "key_frameworks": [
+            "UN Charter Article 51",
+            "Reports of the UN Group of Governmental Experts on ICT (2015, 2021)",
+            "Budapest Convention on Cybercrime"
+          ]
+        },
+        {
+          "id": "the-situation-in-haiti-gang-violence-and-state-collapse",
+          "title": "The Situation in Haiti: Gang Violence and State Collapse",
+          "moderated_caucus_topics": [
+            "Mandate, funding and accountability of the multinational security mission",
+            "Arms trafficking into Haiti and the arms embargo",
+            "A pathway to elections and a legitimate transitional government",
+            "Humanitarian access, displacement and food insecurity"
+          ],
+          "key_frameworks": [
+            "UNSC Resolution 2699 (2023) authorising the Multinational Security Support mission",
+            "UNSC Resolution 2653 (2022) sanctions regime"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "addressing-the-escalating-conflicts-among-member-states-and-",
+          "title": "Addressing the Escalating Conflicts among Member States and Prevention of World War III",
+          "theme": "Armed conflicts",
+          "theme_share_pct": 24,
+          "seen_at": "Hearald's Objective Lateral Debate MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-proliferation-of-non-state-armed-groups-in-the-sahel-reg",
+          "title": "The Proliferation of Non-State Armed Groups in the Sahel Region",
+          "theme": "Terrorism and extremism",
+          "theme_share_pct": 7,
+          "seen_at": "Vanguard MUN I",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-south-china-sea-dispute",
+          "title": "Addressing the South China Sea Dispute",
+          "theme": "Maritime and border disputes",
+          "theme_share_pct": 6,
+          "seen_at": "Perrott Hill British School MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-global-proliferation-of-cyber-warfare",
+          "title": "Addressing the Global Proliferation of Cyber Warfare",
+          "theme": "Cyber and AI",
+          "theme_share_pct": 6,
+          "seen_at": "Slovakia International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "preventing-an-arms-race-in-outer-space",
+          "title": "Preventing an Arms Race in Outer Space",
+          "theme": "Nuclear weapons and disarmament",
+          "theme_share_pct": 6,
+          "seen_at": "ORBIT MUN I",
+          "kind": "theme example"
+        },
+        {
+          "id": "discussing-the-un-peacekeeping-force-mandates",
+          "title": "Discussing the UN Peacekeeping Force Mandates",
+          "theme": "Peacekeeping and peacebuilding",
+          "theme_share_pct": 5,
+          "seen_at": "Copernicus MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-ethiopian-civil-conflict-ensuring-peace-humanitarian-acc",
+          "title": "The Ethiopian Civil Conflict: Ensuring Peace, Humanitarian Access, and Regional Stability",
+          "theme": "Humanitarian crises",
+          "theme_share_pct": 4,
+          "seen_at": "Kant MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-situation-in-haiti-addressing-gang-violence-and-state-co",
+          "title": "The Situation in Haiti: Addressing Gang Violence and State Collapse",
+          "theme": "Crime and drugs",
+          "theme_share_pct": 2,
+          "seen_at": "URUMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-recent-military-escalations-between-iran-and-isra",
+          "title": "Addressing recent military escalations between Iran and Israel to safeguard regional stability and international peace",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Bridge MUN (Second Edition)",
+          "kind": "recent"
+        },
+        {
+          "id": "coming-up-with-an-immediate-solution-to-the-bosnian-war-foll",
+          "title": "Coming up with an immediate solution to the Bosnian War following the fall of the Safe Area in Srebrenica on 11 July 1995",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Perrott Hill British School MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "unhrc",
+      "name": "UN Human Rights Council",
+      "abbr": "UNHRC",
+      "category": "UN body",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 224,
+      "mymun_topic_count": 1885,
+      "typical_seats": 22,
+      "real_body": "47 members elected for three years: 13 African, 13 Asia-Pacific, 8 Latin American and Caribbean, 7 Western European and other, 6 Eastern European",
+      "decision_rule": "Simple majority, no veto",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Humanitarian crises",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "protecting-human-rights-in-the-age-of-artificial-intelligenc",
+          "title": "Protecting Human Rights in the Age of Artificial Intelligence",
+          "moderated_caucus_topics": [
+            "Facial recognition and mass surveillance",
+            "Algorithmic bias in policing, hiring and welfare",
+            "Transparency and the right to an explanation",
+            "Responsibility of technology companies"
+          ],
+          "key_frameworks": [
+            "UN Guiding Principles on Business and Human Rights (2011)",
+            "UNESCO Recommendation on the Ethics of AI (2021)",
+            "UNGA Resolution 78/265 (2024) on safe, secure and trustworthy AI"
+          ]
+        },
+        {
+          "id": "the-rights-of-climate-migrants-and-environmental-refugees",
+          "title": "The Rights of Climate Migrants and Environmental Refugees",
+          "moderated_caucus_topics": [
+            "Legal status of people displaced by climate change",
+            "Planned relocation of communities",
+            "Protection of small island states' populations",
+            "Funding for loss and damage"
+          ],
+          "key_frameworks": [
+            "1951 Refugee Convention",
+            "Global Compact for Safe, Orderly and Regular Migration (2018)",
+            "Teitiota v. New Zealand, UN Human Rights Committee (2020)"
+          ]
+        },
+        {
+          "id": "digital-surveillance-and-the-right-to-privacy",
+          "title": "Digital Surveillance and the Right to Privacy",
+          "moderated_caucus_topics": [
+            "Spyware used against journalists and activists",
+            "Data retention and government access to private data",
+            "Export controls on surveillance technology",
+            "Independent oversight of intelligence agencies"
+          ],
+          "key_frameworks": [
+            "ICCPR Article 17",
+            "UNGA resolutions on the right to privacy in the digital age"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "freedom-of-expression-on-social-media-platforms",
+          "title": "Freedom of Expression on Social Media Platforms",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "Conference of Global Youth",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-rights-of-climate-migrants-and-environmental-",
+          "title": "Addressing the Rights of Climate Migrants and Environmental Refugees",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "Vanguard MUN I",
+          "kind": "theme example"
+        },
+        {
+          "id": "discussing-policies-upholding-human-rights-and-gender-equali",
+          "title": "Discussing policies upholding human rights and gender equality in Afghanistan",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "Albanian College Tirana MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "digital-surveillance-and-human-rights",
+          "title": "Digital surveillance and human rights",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Aura MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "developing-a-framework-to-prevent-pro-war-propaganda-online",
+          "title": "Developing a framework to prevent pro-war propaganda online",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Ikast Brande Gymnasium MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-unsafe-and-inhumane-conditions-prisoners-face",
+          "title": "Addressing the unsafe and inhumane conditions prisoners face in jail",
+          "theme": "Humanitarian crises",
+          "theme_share_pct": null,
+          "seen_at": "POLARIS MUN III",
+          "kind": "theme example"
+        },
+        {
+          "id": "rights-of-indigenous-peoples-facing-climate-displacement",
+          "title": "Rights of Indigenous Peoples Facing Climate Displacement",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "Norwich International School MUN IV",
+          "kind": "theme example"
+        },
+        {
+          "id": "combating-human-trafficking-and-modern-slavery",
+          "title": "Combating Human Trafficking and Modern Slavery",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "Zephra International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-human-rights-in-the-age-of-artificial-intelligenc",
+          "title": "Protecting Human Rights in the Age of Artificial Intelligence",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Univario MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "addressing-the-ongoing-issue-of-kurdish-rights-in-the-middle",
+          "title": "Addressing the ongoing issue of Kurdish rights in the Middle East",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Perrott Hill British School MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "strengthening-the-protection-and-safety-of-united-nations-hu",
+          "title": "Strengthening the Protection and Safety of United Nations Humanitarian Personnel and Journalists in Armed Conflict",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Kant MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "csw",
+      "name": "Commission on the Status of Women / UN Women",
+      "abbr": "CSW",
+      "category": "UN body",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 139,
+      "mymun_topic_count": 995,
+      "typical_seats": 20,
+      "real_body": "45 members elected by ECOSOC for four years",
+      "decision_rule": "Agreed conclusions by consensus; resolutions by majority",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Education and culture",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "closing-the-gender-digital-divide-in-stem-and-ai",
+          "title": "Closing the Gender Digital Divide in STEM and AI",
+          "moderated_caucus_topics": [
+            "Girls' access to devices, connectivity and digital skills",
+            "Women in STEM careers and leadership",
+            "Gender bias in AI systems",
+            "Online harassment pushing women out of digital spaces"
+          ],
+          "key_frameworks": [
+            "CSW67 Agreed Conclusions on innovation and technology (2023)",
+            "Beijing Declaration and Platform for Action (1995)",
+            "SDG 5"
+          ]
+        },
+        {
+          "id": "technology-facilitated-violence-against-women-and-girls",
+          "title": "Technology-Facilitated Violence Against Women and Girls",
+          "moderated_caucus_topics": [
+            "Deepfakes and non-consensual intimate images",
+            "Platform responsibility to remove abuse",
+            "Laws that cover online and offline violence",
+            "Support services for survivors"
+          ],
+          "key_frameworks": [
+            "CEDAW General Recommendation 35 (2017)",
+            "Istanbul Convention (2011)"
+          ]
+        },
+        {
+          "id": "economic-empowerment-of-women-in-developing-countries",
+          "title": "Economic Empowerment of Women in Developing Countries",
+          "moderated_caucus_topics": [
+            "Unpaid care work",
+            "Access to credit, land and property rights",
+            "The gender pay gap and informal work",
+            "Women entrepreneurs and digital finance"
+          ],
+          "key_frameworks": [
+            "CEDAW",
+            "ILO Equal Remuneration Convention (No. 100)",
+            "SDG 5 and SDG 8"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "closing-the-gender-digital-divide-ensuring-equitable-access-",
+          "title": "Closing the Gender Digital Divide: Ensuring Equitable Access to STEM and AI",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "Vanguard MUN I",
+          "kind": "theme example"
+        },
+        {
+          "id": "economic-empowerment-of-women-in-developing-countries",
+          "title": "Economic empowerment of women in developing countries",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "NOVA MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "ensuring-adequate-maternity-leave-and-healthcare-protections",
+          "title": "Ensuring adequate maternity leave and healthcare protections for women in the workforce",
+          "theme": "Health and pandemics",
+          "theme_share_pct": null,
+          "seen_at": "Northern Thailand MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "regulating-ai-generated-deepfakes-and-image-based-exploitati",
+          "title": "Regulating AI-Generated Deepfakes and Image-Based Exploitation Targeting Women and Girls",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Jasienica MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "eliminating-harmful-practices-against-women-and-girls-while-",
+          "title": "Eliminating harmful practices against women and girls while respecting cultural diversity",
+          "theme": "Education and culture",
+          "theme_share_pct": null,
+          "seen_at": "Glory MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "eliminating-gender-discrimination-in-education-and-employmen",
+          "title": "Eliminating Gender Discrimination in Education and Employment Opportunities",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "UN Global Policy Assembly",
+          "kind": "theme example"
+        },
+        {
+          "id": "women-in-conflict-zones-and-post-war-governance",
+          "title": "Women in conflict zones and post-war governance",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Aura MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "reconstructing-protection-frameworks-for-women-and-girls-in-",
+          "title": "Reconstructing protection frameworks for women and girls in forced migration",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "Lyon MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "technology-facilitated-violence-against-women-and-girls",
+          "title": "Technology-facilitated violence against women and girls",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "NOVA MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "addressing-the-global-issue-of-femicide-and-creating-legal-s",
+          "title": "Addressing the global issue of femicide and creating legal, social, and institutional mechanisms in order to prevent it",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Vistula MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "disec",
+      "name": "Disarmament and International Security Committee (GA First Committee)",
+      "abbr": "DISEC",
+      "category": "General Assembly committee",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 138,
+      "mymun_topic_count": 1202,
+      "typical_seats": 24,
+      "real_body": "All 193 member states",
+      "decision_rule": "Equal votes, no veto; the full Assembly needs two thirds on peace and security",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "Nuclear weapons and disarmament",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Terrorism and extremism",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        },
+        {
+          "theme": "Outer space",
+          "share_pct": null
+        },
+        {
+          "theme": "Maritime and border disputes",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "regulation-of-lethal-autonomous-weapons-systems",
+          "title": "Regulation of Lethal Autonomous Weapons Systems",
+          "moderated_caucus_topics": [
+            "Defining meaningful human control over the use of force",
+            "A binding treaty versus non-binding norms",
+            "Accountability when an autonomous system breaks the laws of war",
+            "Proliferation to non-state actors"
+          ],
+          "key_frameworks": [
+            "Convention on Certain Conventional Weapons (CCW) Group of Governmental Experts",
+            "UNGA Resolution 78/241 (2023) on lethal autonomous weapons systems",
+            "Geneva Conventions Additional Protocol I, Article 36"
+          ]
+        },
+        {
+          "id": "preventing-an-arms-race-in-outer-space",
+          "title": "Preventing an Arms Race in Outer Space",
+          "moderated_caucus_topics": [
+            "Anti-satellite weapon tests and space debris",
+            "Verification of a ban on weapons in orbit",
+            "Dual-use satellites and military reliance on commercial space",
+            "Updating the Outer Space Treaty"
+          ],
+          "key_frameworks": [
+            "Outer Space Treaty (1967)",
+            "UNGA resolutions on Prevention of an Arms Race in Outer Space (PAROS)",
+            "UNGA Resolution 77/41 (2022) on destructive direct-ascent anti-satellite missile tests"
+          ]
+        },
+        {
+          "id": "combating-the-illicit-trade-in-small-arms-and-light-weapons",
+          "title": "Combating the Illicit Trade in Small Arms and Light Weapons",
+          "moderated_caucus_topics": [
+            "Marking, tracing and record-keeping of weapons",
+            "Diversion of legally exported arms to conflict zones",
+            "Stockpile security in post-conflict states",
+            "3D-printed and untraceable firearms"
+          ],
+          "key_frameworks": [
+            "UN Programme of Action on Small Arms (2001)",
+            "Arms Trade Treaty (2014)",
+            "International Tracing Instrument (2005)"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "moderating-the-outer-space-arms-race-including-space-systems",
+          "title": "Moderating the outer space arms race including space systems, weapons, and objects",
+          "theme": "Nuclear weapons and disarmament",
+          "theme_share_pct": null,
+          "seen_at": "Albanian College Tirana MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "regulation-of-autonomous-weapons-systems",
+          "title": "Regulation of Autonomous Weapons Systems",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Conference of Global Youth",
+          "kind": "theme example"
+        },
+        {
+          "id": "preventing-arms-proliferation-and-the-use-of-illicit-weapons",
+          "title": "Preventing arms proliferation and the use of illicit weapons by terrorist organizations",
+          "theme": "Terrorism and extremism",
+          "theme_share_pct": null,
+          "seen_at": "ISBMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-proliferation-of-unmanned-aerial-vehicles-uav",
+          "title": "Addressing the Proliferation of Unmanned Aerial Vehicles (UAVs) in Armed Conflicts",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Zephra International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "combating-the-global-proliferation-and-illicit-trade-of-smal",
+          "title": "Combating the Global Proliferation and Illicit Trade of Small Arms and Light Weapons",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "Galabov MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "weaponization-of-outer-space",
+          "title": "Weaponization of Outer Space",
+          "theme": "Outer space",
+          "theme_share_pct": null,
+          "seen_at": "Strategic MUN Chapter II",
+          "kind": "theme example"
+        },
+        {
+          "id": "deliberating-measures-to-maintain-peace-and-security-in-the-",
+          "title": "Deliberating Measures to Maintain Peace and Security in the Taiwan Strait",
+          "theme": "Maritime and border disputes",
+          "theme_share_pct": null,
+          "seen_at": "The Variable Conference",
+          "kind": "theme example"
+        },
+        {
+          "id": "establishing-state-responsibility-for-the-use-of-emerging-te",
+          "title": "Establishing State Responsibility for the Use of Emerging Technologies in Modern Warfare",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Navrachana International MUN XVI",
+          "kind": "recent"
+        },
+        {
+          "id": "the-weaponization-of-the-moon-regulating-the-use-of-lunar-in",
+          "title": "The Weaponization of the Moon: Regulating the Use of Lunar Infrastructure for Military and Strategic Purposes",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "The Variable Conference II",
+          "kind": "recent"
+        },
+        {
+          "id": "regulating-the-proliferation-of-lethal-autonomous-weapons-sy",
+          "title": "Regulating the proliferation of lethal autonomous weapons systems (LAWS) and unmanned aerial vehicles (UAV)",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Albanian College Tirana MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "name": "World Health Organization",
+      "abbr": "WHO",
+      "category": "UN agency",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 129,
+      "mymun_topic_count": 1021,
+      "typical_seats": 20,
+      "real_body": "World Health Assembly of all member states; 34-member Executive Board",
+      "decision_rule": "Majority vote",
+      "binding": "Regulations bind members unless they opt out in time; conventions bind those who accept them",
+      "themes": [
+        {
+          "theme": "Health and pandemics",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "addressing-international-threats-from-antimicrobial-resistan",
+          "title": "Addressing International Threats from Antimicrobial Resistance",
+          "moderated_caucus_topics": [
+            "Antibiotic overuse in agriculture and livestock",
+            "Incentives to develop new antibiotics",
+            "Access to antibiotics in low-income countries",
+            "Surveillance and data sharing"
+          ],
+          "key_frameworks": [
+            "WHO Global Action Plan on AMR (2015)",
+            "UNGA Political Declaration on AMR (2024)",
+            "One Health approach"
+          ]
+        },
+        {
+          "id": "strengthening-global-preparedness-for-future-health-emergenc",
+          "title": "Strengthening Global Preparedness for Future Health Emergencies",
+          "moderated_caucus_topics": [
+            "Equitable access to vaccines and treatments",
+            "Sharing pathogen samples and the benefits that follow",
+            "Financing preparedness in low-income countries",
+            "Countering health misinformation"
+          ],
+          "key_frameworks": [
+            "International Health Regulations (2005), amended 2024",
+            "WHO Pandemic Agreement (adopted May 2025)"
+          ]
+        },
+        {
+          "id": "ensuring-access-to-medicines-and-vaccines-in-developing-coun",
+          "title": "Ensuring Access to Medicines and Vaccines in Developing Countries",
+          "moderated_caucus_topics": [
+            "Patents, compulsory licensing and the TRIPS waiver debate",
+            "Local manufacturing in Africa, Asia and Latin America",
+            "Counterfeit and substandard medicines",
+            "Pricing and procurement pools"
+          ],
+          "key_frameworks": [
+            "TRIPS Agreement and the Doha Declaration (2001)",
+            "WHO Essential Medicines List"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "addressing-international-threats-tied-to-antimicrobial-resis",
+          "title": "Addressing international threats tied to Antimicrobial Resistance",
+          "theme": "Health and pandemics",
+          "theme_share_pct": null,
+          "seen_at": "Quarter MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-maternal-death-spikes-in-conflict-zones",
+          "title": "Addressing the maternal death spikes in conflict zones",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "TE Vizja MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "promoting-adolescent-health-and-wellbeing-in-an-increasingly",
+          "title": "Promoting adolescent health and wellbeing in an increasingly digital world",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "VNMUN INPSS Abu Dhabi",
+          "kind": "theme example"
+        },
+        {
+          "id": "public-health-and-ethical-governance-of-climate-intervention",
+          "title": "Public Health and Ethical Governance of Climate Intervention Technologies",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "Mahapanchayat MUN - Ekklesia",
+          "kind": "theme example"
+        },
+        {
+          "id": "establishing-regulations-on-drugs-that-cause-rapid-weight-lo",
+          "title": "Establishing regulations on drugs that cause rapid weight loss",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "Tricity MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "managing-public-health-crises-among-displaced-populations-an",
+          "title": "Managing public health crises among displaced populations and refugees",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "ChessMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "examining-the-phasing-out-of-nicotine-products-with-emphasis",
+          "title": "Examining the phasing out of nicotine products with emphasis on world economies",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "International American School MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-psychological-and-mental-impacts-of-post-war-",
+          "title": "Addressing the psychological and mental impacts of post-war in communities",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "NOVOMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "strengthening-global-preparedness-and-international-cooperat",
+          "title": "Strengthening Global Preparedness and International Cooperation for Future Health Emergencies",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Univario MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "ensuring-equitable-and-safe-global-access-to-glp-1-therapies",
+          "title": "Ensuring Equitable and Safe Global Access to GLP-1 Therapies Amid Shortages, Counterfeit Medicines, and Rising Demand",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Kant MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "discussing-potential-solutions-to-the-insufficiency-of-medic",
+          "title": "Discussing potential solutions to the insufficiency of medicines and vaccines in developing countries",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Perrott Hill British School MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "ecosoc",
+      "name": "Economic and Social Council",
+      "abbr": "ECOSOC",
+      "category": "Main UN organ",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 122,
+      "mymun_topic_count": 1147,
+      "typical_seats": 21,
+      "real_body": "54 members elected by the General Assembly for three years",
+      "decision_rule": "Simple majority, one vote each, no veto",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "addressing-the-economic-disruption-caused-by-automation-and-",
+          "title": "Addressing the Economic Disruption Caused by Automation and AI",
+          "moderated_caucus_topics": [
+            "Reskilling workers whose jobs are automated",
+            "Social protection for gig and platform workers",
+            "The AI divide between developed and developing countries",
+            "Taxing automation to fund transitions"
+          ],
+          "key_frameworks": [
+            "ILO Decent Work Agenda",
+            "SDG 8",
+            "Global Digital Compact (2024)"
+          ]
+        },
+        {
+          "id": "promoting-a-sustainable-energy-transition-in-developing-nati",
+          "title": "Promoting a Sustainable Energy Transition in Developing Nations",
+          "moderated_caucus_topics": [
+            "Financing renewable energy where capital is expensive",
+            "Just transition for coal-dependent workers and regions",
+            "Critical minerals and fair value for producing countries",
+            "Energy access for people without electricity"
+          ],
+          "key_frameworks": [
+            "Paris Agreement (2015)",
+            "SDG 7",
+            "Just Energy Transition Partnerships"
+          ]
+        },
+        {
+          "id": "strengthening-global-efforts-to-achieve-sustainable-urban-de",
+          "title": "Strengthening Global Efforts to Achieve Sustainable Urban Development",
+          "moderated_caucus_topics": [
+            "Informal settlements and affordable housing",
+            "Urban climate resilience against heat and floods",
+            "Public transport and clean air",
+            "Smart cities and data governance"
+          ],
+          "key_frameworks": [
+            "New Urban Agenda (Habitat III, 2016)",
+            "SDG 11"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "addressing-global-economic-inflation-resulting-from-prolonge",
+          "title": "Addressing global economic inflation resulting from prolonged international conflict",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "Albanian College Tirana MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "promoting-sustainable-energy-transition-in-developing-nation",
+          "title": "Promoting sustainable energy transition in developing nations",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "Glory MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "ai-in-urban-governance",
+          "title": "AI in urban governance",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Stark MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "bridging-inequality-in-post-pandemic-economies",
+          "title": "Bridging inequality in post-pandemic economies",
+          "theme": "Health and pandemics",
+          "theme_share_pct": null,
+          "seen_at": "Aura MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "advocating-for-education-and-protection-for-women-and-childr",
+          "title": "Advocating for education and protection for women and children in the Middle East",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "CUHK MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-governance-failures-and-corruption-within-fifa-an",
+          "title": "Addressing Governance Failures and Corruption within FIFA and Global Sports Governance",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "Paris International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-economic-impact-of-climate-migration",
+          "title": "The Economic Impact of Climate Migration",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "ARVION International Youth Diplomacy Summit",
+          "kind": "theme example"
+        },
+        {
+          "id": "rebuilding-war-torn-economies-and-ensuring-global-economic-s",
+          "title": "Rebuilding War-Torn Economies and Ensuring Global Economic Stability",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "World War Three MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-question-of-addressing-the-economic-disruption-caused-by",
+          "title": "The question of addressing the economic disruption caused by automation and artificial intelligence",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Cologne International School MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "managing-the-economic-implications-of-global-competition-in-",
+          "title": "Managing the Economic Implications of Global Competition in Artificial Intelligence Development",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Kant MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "strengthening-global-efforts-to-achieve-sustainable-urban-de",
+          "title": "Strengthening Global Efforts to Achieve Sustainable Urban Development",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Diplomatia International MUN Convention",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "crisis",
+      "name": "Crisis committee",
+      "abbr": "Crisis",
+      "category": "Special format",
+      "seat_type": "portfolio",
+      "difficulty": "Advanced",
+      "mymun_upcoming_conferences": 106,
+      "mymun_topic_count": 662,
+      "typical_seats": 15,
+      "real_body": "No fixed agenda: delegates respond to an unfolding scenario through group directives and private crisis notes, while crisis staff release updates",
+      "decision_rule": "Directives are voted on",
+      "binding": "In-scenario",
+      "themes": [
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Revolutions and independence",
+          "share_pct": null
+        },
+        {
+          "theme": "Democracy and governance",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Future and science fiction",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "deliberation-on-the-us-iran-and-russia-ukraine-war",
+          "title": "Deliberation on the US-Iran and Russia-Ukraine War",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Hearald's Objective Lateral Debate MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-turkish-war-of-independence-1919-1922",
+          "title": "The Turkish War of Independence (1919-1922)",
+          "theme": "Revolutions and independence",
+          "theme_share_pct": null,
+          "seen_at": "TE Vizja MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "private-coup-of-the-united-nations",
+          "title": "Private Coup of the United Nations",
+          "theme": "Democracy and governance",
+          "theme_share_pct": null,
+          "seen_at": "Leiden University MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-ai-emergency-a-worldwide-crisis",
+          "title": "The AI Emergency: A Worldwide Crisis",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Atlas MUN Global II",
+          "kind": "theme example"
+        },
+        {
+          "id": "preventing-systemic-bank-collapse-and-coordinating-bailouts",
+          "title": "Preventing Systemic Bank Collapse and Coordinating Bailouts",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "Rockford MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-year-2440-the-threat-of-the-past",
+          "title": "The Year 2440: The Threat of the Past",
+          "theme": "Future and science fiction",
+          "theme_share_pct": null,
+          "seen_at": "MUNSA Barcelona",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-2014-isis-escalation-and-the-camp-speicher-massacre",
+          "title": "The 2014 ISIS Escalation and the Camp Speicher Massacre",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Rockford MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "rms-titanic-11-40",
+          "title": "RMS Titanic: 11:40",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "RUA MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "the-aftermath-following-the-assassination-of-julius-caesar",
+          "title": "The aftermath following the assassination of Julius Caesar",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Banská Bystrica MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "historical",
+      "name": "Historical committee",
+      "abbr": "Historical",
+      "category": "Special format",
+      "seat_type": "country",
+      "difficulty": "Advanced",
+      "mymun_upcoming_conferences": 98,
+      "mymun_topic_count": 785,
+      "typical_seats": 17,
+      "real_body": "Recreates a body on a set past date: delegates may only use what was known then, and membership follows that date",
+      "decision_rule": "As the recreated body",
+      "binding": "In-scenario",
+      "themes": [
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Cold War",
+          "share_pct": null
+        },
+        {
+          "theme": "Nuclear weapons and disarmament",
+          "share_pct": null
+        },
+        {
+          "theme": "Revolutions and independence",
+          "share_pct": null
+        },
+        {
+          "theme": "Peacekeeping and peacebuilding",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "the-six-day-war",
+          "title": "The Six-Day War",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Conference of Global Youth",
+          "kind": "theme example"
+        },
+        {
+          "id": "discussing-the-events-of-the-vietnam-war-1955-75",
+          "title": "Discussing the events of the Vietnam War (1955-75)",
+          "theme": "Cold War",
+          "theme_share_pct": null,
+          "seen_at": "Northern Thailand MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "weapons-of-mass-destruction-in-iraq-2003",
+          "title": "Weapons of Mass Destruction in Iraq (2003)",
+          "theme": "Nuclear weapons and disarmament",
+          "theme_share_pct": null,
+          "seen_at": "Hamburg MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "should-colonies-proclaim-independence",
+          "title": "Should colonies proclaim independence?",
+          "theme": "Revolutions and independence",
+          "theme_share_pct": null,
+          "seen_at": "Second Continental Congress by MUN PSL",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-paris-peace-conference-1919-1920",
+          "title": "The Paris Peace Conference (1919-1920)",
+          "theme": "Peacekeeping and peacebuilding",
+          "theme_share_pct": null,
+          "seen_at": "Alba Iulia MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-cuban-missile-crisis-14-october-1962-managing-the-escala",
+          "title": "The Cuban Missile Crisis, 14 October 1962: Managing the Escalation Between the United States and the Soviet Union",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Hearald's Objective Lateral Debate MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "addressing-the-conquest-of-constantinople-1453",
+          "title": "Addressing the Conquest of Constantinople (1453)",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Northern Thailand MUN II",
+          "kind": "recent"
+        },
+        {
+          "id": "designing-the-post-cold-war-global-economic-order",
+          "title": "Designing the Post-Cold War Global Economic Order",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Model Global Economic Summit",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "unodc",
+      "name": "UN Office on Drugs and Crime",
+      "abbr": "UNODC",
+      "category": "UN agency",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 93,
+      "mymun_topic_count": 614,
+      "typical_seats": 20,
+      "real_body": "No member seats; governed by the Commission on Narcotic Drugs (53 states) and the CCPCJ (40)",
+      "decision_rule": "Simple majority in Model UN",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Crime and drugs",
+          "share_pct": 72
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": 10
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": 8
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": 5
+        },
+        {
+          "theme": "Terrorism and extremism",
+          "share_pct": 5
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": 4
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": 3
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": 3
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "the-global-rise-of-synthetic-drug-trafficking",
+          "title": "The Global Rise of Synthetic Drug Trafficking",
+          "moderated_caucus_topics": [
+            "Precursor chemicals and their supply chains",
+            "Fentanyl and captagon markets",
+            "Treatment and harm reduction versus criminal justice",
+            "Online drug markets and postal shipments"
+          ],
+          "key_frameworks": [
+            "Single Convention on Narcotic Drugs (1961)",
+            "Convention against Illicit Traffic in Narcotic Drugs (1988)"
+          ]
+        },
+        {
+          "id": "combating-cross-border-human-trafficking-networks",
+          "title": "Combating Cross-Border Human Trafficking Networks",
+          "moderated_caucus_topics": [
+            "Joint investigations between countries",
+            "Following the money from trafficking",
+            "Protecting victims who testify",
+            "Trafficking into online scam centres"
+          ],
+          "key_frameworks": [
+            "Palermo Protocol on Trafficking in Persons (2000)",
+            "UNTOC (2000)"
+          ]
+        },
+        {
+          "id": "the-criminal-use-of-cryptocurrency-in-organized-crime",
+          "title": "The Criminal Use of Cryptocurrency in Organized Crime",
+          "moderated_caucus_topics": [
+            "Know-your-customer rules for crypto exchanges",
+            "Seizing and returning crypto assets",
+            "Privacy coins and mixers",
+            "Cooperation with unregulated jurisdictions"
+          ],
+          "key_frameworks": [
+            "FATF Recommendation 15 and the travel rule",
+            "UN Convention against Corruption (2003)"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "strengthening-international-cooperation-to-combat-cross-bord",
+          "title": "Strengthening international cooperation to combat cross-border human trafficking networks",
+          "theme": "Crime and drugs",
+          "theme_share_pct": 72,
+          "seen_at": "Int. School of Prague MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "tackling-the-production-of-counterfeit-medicines",
+          "title": "Tackling the production of counterfeit medicines",
+          "theme": "Health and pandemics",
+          "theme_share_pct": 10,
+          "seen_at": "Farel Academy MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-growth-of-cyber-enabled-fraud-and-underground",
+          "title": "Addressing the Growth of Cyber-Enabled Fraud and Underground Banking",
+          "theme": "Cyber and AI",
+          "theme_share_pct": 8,
+          "seen_at": "Bloc Zero MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-criminal-use-of-cryptocurrency-in-transnation",
+          "title": "Addressing the Criminal Use of Cryptocurrency in Transnational Organized Crime",
+          "theme": "Economy and development",
+          "theme_share_pct": 5,
+          "seen_at": "Qadiyya MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "curbing-illicit-gold-trade-and-its-links-to-terrorism-in-the",
+          "title": "Curbing illicit gold trade and its links to terrorism in the Sahel region",
+          "theme": "Terrorism and extremism",
+          "theme_share_pct": 5,
+          "seen_at": "Monte Cassino MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "enhancing-protection-of-victims-in-human-trafficking-and-mig",
+          "title": "Enhancing protection of victims in human trafficking and migrant smuggling",
+          "theme": "Refugees and migration",
+          "theme_share_pct": 4,
+          "seen_at": "Eton MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "tackling-the-surge-in-cybercrime-and-digital-trafficking-of-",
+          "title": "Tackling the Surge in Cybercrime and Digital Trafficking of Minors",
+          "theme": "Women and children",
+          "theme_share_pct": 3,
+          "seen_at": "Vionis MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-journalists-and-human-rights-defenders-from-crimi",
+          "title": "Protecting Journalists and Human Rights Defenders from Criminal Retaliation",
+          "theme": "Human rights",
+          "theme_share_pct": 3,
+          "seen_at": "Khalsa Secondary MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-global-rise-of-synthetic-drug-trafficking-and",
+          "title": "Addressing the global rise of synthetic drug trafficking and its implications for public safety and governance",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Int. School of Prague MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "addressing-the-nexus-between-illicit-drug-trafficking-organi",
+          "title": "Addressing the Nexus Between Illicit Drug Trafficking, Organized Crime, and Terrorism in Conflict-Affected Regions",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "The Arata Summit",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "unep",
+      "name": "UN Environment Programme",
+      "abbr": "UNEP",
+      "category": "UN agency",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 73,
+      "mymun_topic_count": 686,
+      "typical_seats": 20,
+      "real_body": "UN Environment Assembly of all 193 member states, meeting every two years",
+      "decision_rule": "Simple majority in Model UN",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Climate and environment",
+          "share_pct": 68
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": 7
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": 3
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": 2
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": 2
+        },
+        {
+          "theme": "Outer space",
+          "share_pct": 1
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "establishing-global-standards-to-reduce-plastic-pollution",
+          "title": "Establishing Global Standards to Reduce Plastic Pollution",
+          "moderated_caucus_topics": [
+            "Caps on new plastic production versus waste management",
+            "Banning single-use plastics",
+            "Microplastics in water and food",
+            "Waste picker livelihoods and the informal sector"
+          ],
+          "key_frameworks": [
+            "UNEA Resolution 5/14 (2022) launching the plastics treaty talks",
+            "Basel Convention plastic waste amendments (2019)"
+          ]
+        },
+        {
+          "id": "regulating-electronic-waste",
+          "title": "Regulating Electronic Waste",
+          "moderated_caucus_topics": [
+            "E-waste exports from rich to poor countries",
+            "Right to repair and product lifespan",
+            "Recovering critical minerals",
+            "Worker health in informal recycling"
+          ],
+          "key_frameworks": [
+            "Basel Convention (1989)",
+            "Extended producer responsibility schemes"
+          ]
+        },
+        {
+          "id": "addressing-global-water-scarcity-in-a-changing-climate",
+          "title": "Addressing Global Water Scarcity in a Changing Climate",
+          "moderated_caucus_topics": [
+            "Groundwater depletion and agriculture",
+            "Desalination and its environmental cost",
+            "Glacier melt and river basins",
+            "Water pollution from industry"
+          ],
+          "key_frameworks": [
+            "SDG 6",
+            "UN 2023 Water Conference Water Action Agenda"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "protecting-one-planet-global-cooperation-on-environmental-ch",
+          "title": "Protecting One Planet: Global Cooperation on Environmental Challenges",
+          "theme": "Climate and environment",
+          "theme_share_pct": 68,
+          "seen_at": "AllWorldMUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "mobilizing-climate-finance-to-accelerate-global-environmenta",
+          "title": "Mobilizing Climate Finance to Accelerate Global Environmental Restoration",
+          "theme": "Economy and development",
+          "theme_share_pct": 7,
+          "seen_at": "Green Horizon MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "mitigating-the-environmental-spread-of-antimicrobial-resista",
+          "title": "Mitigating the Environmental Spread of Antimicrobial Resistance",
+          "theme": "Health and pandemics",
+          "theme_share_pct": 3,
+          "seen_at": "Copernicus MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "evaluating-and-responding-to-the-environmental-impact-of-art",
+          "title": "Evaluating and Responding to the Environmental Impact of Artificial Intelligence",
+          "theme": "Cyber and AI",
+          "theme_share_pct": 2,
+          "seen_at": "Camp MUN IV",
+          "kind": "theme example"
+        },
+        {
+          "id": "climate-change-and-conflict-in-the-horn-of-africa",
+          "title": "Climate Change and Conflict in the Horn of Africa",
+          "theme": "Armed conflicts",
+          "theme_share_pct": 2,
+          "seen_at": "URUMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "regulating-the-environmental-impact-of-the-space-industry",
+          "title": "Regulating the Environmental Impact of the Space Industry",
+          "theme": "Outer space",
+          "theme_share_pct": 1,
+          "seen_at": "Thames British School MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-question-of-regulating-electronic-waste-to-mitigate-envi",
+          "title": "The question of regulating electronic waste to mitigate environmental damage and promote global stability",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Cologne International School MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "addressing-deep-sea-mining-and-plastic-pollution-to-protect-",
+          "title": "Addressing Deep-Sea Mining and Plastic Pollution to Protect Marine Biodiversity and Promote Sustainable Use of Ocean Resources",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Youth Oriented MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "establishing-global-standards-to-reduce-plastic-pollution-an",
+          "title": "Establishing Global Standards to Reduce Plastic Pollution and Microplastics",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "DLMUN Climate Summit VI",
+          "kind": "recent"
+        },
+        {
+          "id": "addressing-global-water-scarcity-a-human-right-and-priority-",
+          "title": "Addressing Global Water Scarcity: a Human Right and Priority in a Climate-Change World",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Costa Rica International MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "unga",
+      "name": "UN General Assembly",
+      "abbr": "UNGA",
+      "category": "Main UN organ",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 65,
+      "mymun_topic_count": 654,
+      "typical_seats": 28,
+      "real_body": "All 193 member states, one vote each",
+      "decision_rule": "Simple majority; important questions (peace and security, new members, budget) need two thirds",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "managing-the-global-water-crisis-as-a-trigger-for-conflict",
+          "title": "Managing the Global Water Crisis as a Trigger for Conflict",
+          "moderated_caucus_topics": [
+            "Transboundary rivers and sharing agreements between upstream and downstream states",
+            "Financing water infrastructure in developing countries",
+            "Water as a human right and the role of privatisation",
+            "Early warning for water-related conflict"
+          ],
+          "key_frameworks": [
+            "UNGA Resolution 64/292 (2010) on the human right to water",
+            "UN Watercourses Convention (1997)",
+            "SDG 6"
+          ]
+        },
+        {
+          "id": "combating-transnational-organized-crime-in-the-digital-age",
+          "title": "Combating Transnational Organized Crime in the Digital Age",
+          "moderated_caucus_topics": [
+            "Cross-border sharing of electronic evidence",
+            "Cryptocurrency, money laundering and financial intelligence units",
+            "Balancing surveillance powers with privacy rights",
+            "Capacity building for developing countries' police and courts"
+          ],
+          "key_frameworks": [
+            "UN Convention against Transnational Organized Crime (Palermo, 2000)",
+            "UN Convention against Cybercrime (adopted 2024)"
+          ]
+        },
+        {
+          "id": "ensuring-equitable-education-for-all-regardless-of-gender",
+          "title": "Ensuring Equitable Education for All Regardless of Gender",
+          "moderated_caucus_topics": [
+            "Girls out of school in conflict and crisis settings",
+            "Child marriage and early pregnancy as barriers to schooling",
+            "Closing the digital divide in remote learning",
+            "Funding commitments and accountability for SDG 4"
+          ],
+          "key_frameworks": [
+            "SDG 4 and SDG 5",
+            "Convention on the Elimination of All Forms of Discrimination against Women (CEDAW)",
+            "Convention on the Rights of the Child"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "promoting-international-cooperation-for-sustainable-developm",
+          "title": "Promoting International Cooperation for Sustainable Development and Global Stability",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "Discover MUN Moot Court",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-threat-of-cyber-warfare-to-international-secu",
+          "title": "Addressing the Threat of Cyber Warfare to International Security",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "GiMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "managing-the-global-water-crisis-as-a-trigger-for-conflict",
+          "title": "Managing the Global Water Crisis as a Trigger for Conflict",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "GiMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "preventing-escalation-of-conflicts-in-the-middle-east",
+          "title": "Preventing escalation of conflicts in the Middle East",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Mock Arab League MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-future-of-stateless-nations-and-the-right-to-self-determ",
+          "title": "The Future of Stateless Nations and the Right to Self-Determination",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "Voluntary Students X International Virtual MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-democracy-and-human-rights-in-venezuela",
+          "title": "Addressing democracy and human rights in Venezuela",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "MUNSA Barcelona",
+          "kind": "theme example"
+        },
+        {
+          "id": "ensuring-equitable-education-for-all-regardless-of-gender",
+          "title": "Ensuring equitable education for all regardless of gender",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "Surya Varsani Academy MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "combating-transnational-organized-crime-in-the-digital-age",
+          "title": "Combating Transnational Organized Crime in the Digital Age",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "International Virtual MUN",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "press",
+      "name": "International Press Corps",
+      "abbr": "IPC",
+      "category": "Special format",
+      "seat_type": "journalist",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 63,
+      "mymun_topic_count": null,
+      "typical_seats": 8,
+      "real_body": "Delegates are journalists for named outlets (such as Reuters or Al Jazeera). They sit in on other committees, interview delegates and publish articles, photos and videos under editor review",
+      "decision_rule": "None",
+      "binding": "None",
+      "themes": [
+        {
+          "theme": "Committee coverage",
+          "share_pct": null
+        },
+        {
+          "theme": "Journalism and conflict",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "reporting-on-the-happenings-and-dynamics-of-every-committee",
+          "title": "Reporting on the happenings and dynamics of every committee",
+          "theme": "Committee coverage",
+          "theme_share_pct": null,
+          "seen_at": "Freiburg MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-role-of-journalism-in-armed-conflict-disinformation-and-",
+          "title": "The Role of Journalism in Armed Conflict: Disinformation and Artificial Intelligence",
+          "theme": "Journalism and conflict",
+          "theme_share_pct": null,
+          "seen_at": "Future Leaders Youth International MUN",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "unicef",
+      "name": "UNICEF",
+      "abbr": "UNICEF",
+      "category": "UN agency",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 52,
+      "mymun_topic_count": 393,
+      "typical_seats": 22,
+      "real_body": "36-member Executive Board elected by ECOSOC for three years",
+      "decision_rule": "Simple majority in Model UN",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Education and culture",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "safeguarding-children-s-data-and-privacy-in-a-digital-world",
+          "title": "Safeguarding Children's Data and Privacy in a Digital World",
+          "moderated_caucus_topics": [
+            "Age verification and children's accounts",
+            "Targeted advertising to children",
+            "Educational technology and student data",
+            "Online grooming and exploitation"
+          ],
+          "key_frameworks": [
+            "Convention on the Rights of the Child Article 16",
+            "CRC General Comment No. 25 (2021) on children's rights in the digital environment"
+          ]
+        },
+        {
+          "id": "protecting-children-in-armed-conflicts-and-humanitarian-cris",
+          "title": "Protecting Children in Armed Conflicts and Humanitarian Crises",
+          "moderated_caucus_topics": [
+            "The six grave violations against children",
+            "Education in emergencies",
+            "Unaccompanied and separated children",
+            "Psychosocial support"
+          ],
+          "key_frameworks": [
+            "UNSC Resolution 1612 (2005) monitoring mechanism",
+            "Optional Protocol on children in armed conflict (2000)"
+          ]
+        },
+        {
+          "id": "combating-child-labour",
+          "title": "Combating Child Labour",
+          "moderated_caucus_topics": [
+            "Child labour in cocoa, mining and fashion supply chains",
+            "Cash transfers to keep children in school",
+            "Hazardous work definitions and enforcement",
+            "Child labour after economic shocks"
+          ],
+          "key_frameworks": [
+            "ILO Convention 182 on the Worst Forms of Child Labour",
+            "ILO Minimum Age Convention (No. 138)",
+            "SDG target 8.7"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "the-question-of-safeguarding-children-s-data-and-privacy-in-",
+          "title": "The question of safeguarding children's data and privacy in an increasingly digital world",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "Cologne International School MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "ensuring-access-to-quality-education-for-all-children",
+          "title": "Ensuring Access to Quality Education for All Children",
+          "theme": "Education and culture",
+          "theme_share_pct": null,
+          "seen_at": "Nexus MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-children-in-armed-conflicts-and-humanitarian-cris",
+          "title": "Protecting Children in Armed Conflicts and Humanitarian Crises",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Global Youth Summit",
+          "kind": "theme example"
+        },
+        {
+          "id": "combating-child-poverty-malnutrition-and-inequality",
+          "title": "Combating Child Poverty, Malnutrition and Inequality",
+          "theme": "Health and pandemics",
+          "theme_share_pct": null,
+          "seen_at": "Global Youth Summit",
+          "kind": "theme example"
+        },
+        {
+          "id": "safeguarding-children-s-rights-and-mental-well-being-in-conf",
+          "title": "Safeguarding Children's Rights and Mental Well-Being in Conflict Zones and Digital Spaces",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "OIWCAS MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-stateless-generation-addressing-the-rights-of-stateless-",
+          "title": "The Stateless Generation: Addressing the Rights of Stateless Children",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "London International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "tackling-the-increasing-rate-of-drug-use-among-adolescents",
+          "title": "Tackling the increasing rate of drug use among adolescents",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "Farel Academy MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-growing-impact-of-child-labour-on-children-s-education-s",
+          "title": "The Growing Impact of Child Labour on Children's Education, Safety, and Future Development",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Emirates Youth MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "advancing-girls-education-in-the-digital-age",
+          "title": "Advancing Girls' Education in the Digital Age",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Equality Bridge Global Gender Equality Forum",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "sochum",
+      "name": "Social, Humanitarian and Cultural Committee (GA Third Committee)",
+      "abbr": "SOCHUM",
+      "category": "General Assembly committee",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 51,
+      "mymun_topic_count": 561,
+      "typical_seats": 30,
+      "real_body": "All 193 member states",
+      "decision_rule": "Simple majority, no veto",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        },
+        {
+          "theme": "Education and culture",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        },
+        {
+          "theme": "Humanitarian crises",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "defending-freedom-of-expression-and-the-press-during-politic",
+          "title": "Defending Freedom of Expression and the Press During Political Unrest",
+          "moderated_caucus_topics": [
+            "Internet shutdowns during protests and elections",
+            "Safety of journalists and impunity for attacks",
+            "Laws on misinformation and their misuse against critics",
+            "Platform content moderation and state pressure"
+          ],
+          "key_frameworks": [
+            "Universal Declaration of Human Rights Article 19",
+            "International Covenant on Civil and Political Rights Article 19",
+            "UN Plan of Action on the Safety of Journalists"
+          ]
+        },
+        {
+          "id": "fighting-modern-slavery-and-transnational-human-trafficking",
+          "title": "Fighting Modern Slavery and Transnational Human Trafficking",
+          "moderated_caucus_topics": [
+            "Forced labour in global supply chains",
+            "Identifying and protecting victims rather than prosecuting them",
+            "Online recruitment and trafficking",
+            "Cooperation between origin, transit and destination states"
+          ],
+          "key_frameworks": [
+            "Palermo Protocol on Trafficking in Persons (2000)",
+            "ILO Forced Labour Protocol (2014)",
+            "SDG target 8.7"
+          ]
+        },
+        {
+          "id": "the-rights-of-children-in-armed-conflict",
+          "title": "The Rights of Children in Armed Conflict",
+          "moderated_caucus_topics": [
+            "Recruitment and use of child soldiers",
+            "Attacks on schools and hospitals",
+            "Reintegration and mental health support for former child soldiers",
+            "Monitoring and naming parties responsible"
+          ],
+          "key_frameworks": [
+            "Convention on the Rights of the Child and its Optional Protocol on children in armed conflict",
+            "Paris Principles (2007)",
+            "Safe Schools Declaration (2015)"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "defending-freedom-of-expression-and-the-press-during-politic",
+          "title": "Defending freedom of expression and the press during political unrest",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "Southwest MUN One Day Conference",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-rights-of-children-in-armed-conflict-prevention-and-rein",
+          "title": "The Rights of Children in Armed Conflict: Prevention and Reintegration Strategies",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "Lagos MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "promoting-the-long-term-integration-of-refugees-and-protecti",
+          "title": "Promoting the long-term integration of refugees and protection of human rights globally",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "ISBMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "combatting-educational-inequalities-amongst-countries",
+          "title": "Combatting educational inequalities amongst countries",
+          "theme": "Education and culture",
+          "theme_share_pct": null,
+          "seen_at": "MUNSCE",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-human-rights-implications-of-emerging-digital",
+          "title": "Addressing the Human Rights Implications of Emerging Digital Surveillance Technologies",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "FaceMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "fighting-modern-slavery-and-transnational-human-trafficking-",
+          "title": "Fighting Modern Slavery and Transnational Human Trafficking Globally",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "Gauting OvTG MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-humanitarian-crisis-in-conflict-zones",
+          "title": "Addressing the Humanitarian Crisis in Conflict Zones",
+          "theme": "Humanitarian crises",
+          "theme_share_pct": null,
+          "seen_at": "International Rhetoric Conference",
+          "kind": "theme example"
+        },
+        {
+          "id": "developing-measures-to-combat-impunity-and-ensure-the-freedo",
+          "title": "Developing measures to combat impunity and ensure the freedom of the press",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Ikast Brande Gymnasium MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "protecting-freedom-of-religion-or-belief-in-areas-affected-b",
+          "title": "Protecting Freedom of Religion or Belief in Areas Affected by Conflict and Political Instability",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "FaceMUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "unesco",
+      "name": "UNESCO",
+      "abbr": "UNESCO",
+      "category": "UN agency",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 50,
+      "mymun_topic_count": 503,
+      "typical_seats": 23,
+      "real_body": "General Conference of all member states; 58-member Executive Board",
+      "decision_rule": "Conventions need two thirds; recommendations a simple majority",
+      "binding": "Members must submit adopted texts to national authorities within a year",
+      "themes": [
+        {
+          "theme": "Education and culture",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "protecting-cultural-heritage-sites-in-active-conflict-zones",
+          "title": "Protecting Cultural Heritage Sites in Active Conflict Zones",
+          "moderated_caucus_topics": [
+            "Deliberate destruction as a war crime",
+            "Looting and trafficking of antiquities",
+            "Digital preservation of threatened sites",
+            "Reconstruction and community ownership"
+          ],
+          "key_frameworks": [
+            "Hague Convention (1954) and its protocols",
+            "UNESCO 1970 Convention on illicit trafficking of cultural property",
+            "UNSC Resolution 2347 (2017)"
+          ]
+        },
+        {
+          "id": "responsible-and-ethical-use-of-ai-in-education",
+          "title": "Responsible and Ethical Use of AI in Education",
+          "moderated_caucus_topics": [
+            "AI tutors and the role of teachers",
+            "Cheating, assessment and academic integrity",
+            "Student data and privacy",
+            "The AI gap between rich and poor schools"
+          ],
+          "key_frameworks": [
+            "UNESCO Recommendation on the Ethics of AI (2021)",
+            "UNESCO Guidance for generative AI in education and research (2023)"
+          ]
+        },
+        {
+          "id": "strengthening-commitments-to-quality-universal-education",
+          "title": "Strengthening Commitments to Quality Universal Education",
+          "moderated_caucus_topics": [
+            "Teacher shortages and training",
+            "Foundational literacy and numeracy",
+            "Inclusive education for children with disabilities",
+            "Domestic and international education financing"
+          ],
+          "key_frameworks": [
+            "SDG 4",
+            "Incheon Declaration (2015)"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "protecting-cultural-heritage-sites-in-active-conflict-zones",
+          "title": "Protecting Cultural Heritage Sites in Active Conflict Zones",
+          "theme": "Education and culture",
+          "theme_share_pct": null,
+          "seen_at": "Vanguard MUN I",
+          "kind": "theme example"
+        },
+        {
+          "id": "responsible-and-ethical-use-of-artificial-intelligence-in-ed",
+          "title": "Responsible and ethical use of artificial intelligence in education",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "VNMUN INPSS Abu Dhabi",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-cultural-and-natural-heritage-sites-from-climate-",
+          "title": "Protecting Cultural and Natural Heritage Sites from Climate Change",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "DLMUN Climate Summit VI",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-indigenous-or-nomadic-land-and-culture-despite-ur",
+          "title": "Protecting Indigenous or Nomadic land and culture despite urbanization and pollution",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "Organic Modeled UN",
+          "kind": "theme example"
+        },
+        {
+          "id": "closing-the-digital-gender-gap-through-inclusive-education-a",
+          "title": "Closing the Digital Gender Gap through Inclusive Education and Innovation",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "Equality Bridge Global Gender Equality Forum",
+          "kind": "theme example"
+        },
+        {
+          "id": "ethical-governance-of-artificial-intelligence-for-sustainabl",
+          "title": "Ethical Governance of Artificial Intelligence for Sustainable Development",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "Voluntary Students MUN V",
+          "kind": "theme example"
+        },
+        {
+          "id": "future-of-indigenous-languages-traditions-and-medicines",
+          "title": "Future of indigenous languages, traditions and medicines",
+          "theme": "Health and pandemics",
+          "theme_share_pct": null,
+          "seen_at": "Audencia MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "strengthening-national-and-international-commitments-to-qual",
+          "title": "Strengthening national and international commitments to quality universal education",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Northern Thailand MUN II",
+          "kind": "recent"
+        },
+        {
+          "id": "water-sustainability-in-times-of-global-crisis-protecting-wa",
+          "title": "Water Sustainability in Times of Global Crisis: Protecting Water Resources Amid Climate Change and Conflict",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Prva Privatna Gimnazija MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "icj",
+      "name": "International Court of Justice",
+      "abbr": "ICJ",
+      "category": "Court",
+      "seat_type": "court_role",
+      "difficulty": "Advanced",
+      "mymun_upcoming_conferences": 44,
+      "mymun_topic_count": 320,
+      "typical_seats": 13,
+      "real_body": "15 judges; judgments bind the parties and are final; advisory opinions generally are not binding",
+      "decision_rule": "Majority of judges",
+      "binding": "Judgments bind the parties",
+      "themes": [
+        {
+          "theme": "International law and justice",
+          "share_pct": null
+        },
+        {
+          "theme": "Maritime and border disputes",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Nuclear weapons and disarmament",
+          "share_pct": null
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "advisory-opinion-on-reparation-for-injuries-suffered-in-the-",
+          "title": "Advisory Opinion on Reparation for Injuries Suffered in the Service of the United Nations (1949)",
+          "theme": "International law and justice",
+          "theme_share_pct": null,
+          "seen_at": "Lagos MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "land-and-maritime-delimitation-and-sovereignty-over-islands-",
+          "title": "Land and Maritime Delimitation and Sovereignty over Islands (Gabon/Equatorial Guinea)",
+          "theme": "Maritime and border disputes",
+          "theme_share_pct": null,
+          "seen_at": "Anavryta Model Lyceum MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "discrimination-qatar-v-uae",
+          "title": "Discrimination: Qatar v. UAE",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "Global Virtual MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "nuclear-tests-australia-v-france",
+          "title": "Nuclear Tests (Australia v. France)",
+          "theme": "Nuclear weapons and disarmament",
+          "theme_share_pct": null,
+          "seen_at": "SISCMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "advisory-opinion-the-legal-status-of-the-sustainable-develop",
+          "title": "Advisory opinion: the legal status of the Sustainable Development Goals",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "Milan International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "legal-liability-of-ai-malfunction-and-harm",
+          "title": "Legal liability of AI malfunction and harm",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "EthixMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "nicaragua-v-united-states-military-and-paramilitary-activiti",
+          "title": "Nicaragua v. United States (Military and Paramilitary Activities in and against Nicaragua), 1986",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Northern Thailand MUN II",
+          "kind": "recent"
+        },
+        {
+          "id": "corfu-channel-united-kingdom-v-albania-1949",
+          "title": "Corfu Channel (United Kingdom v Albania), 1949",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Lagos MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "india-v-pakistan-interpretation-and-implementation-of-the-in",
+          "title": "India v Pakistan: interpretation and implementation of the Indus Waters Treaty",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "All Asia NODMUN IV",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "specpol",
+      "name": "Special Political and Decolonization Committee (GA Fourth Committee)",
+      "abbr": "SPECPOL",
+      "category": "General Assembly committee",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 42,
+      "mymun_topic_count": 436,
+      "typical_seats": 26,
+      "real_body": "All 193 member states",
+      "decision_rule": "Simple majority, no veto",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "Maritime and border disputes",
+          "share_pct": null
+        },
+        {
+          "theme": "Peacekeeping and peacebuilding",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Outer space",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Democracy and governance",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "enhancing-the-effectiveness-of-un-peacekeeping-operations",
+          "title": "Enhancing the Effectiveness of UN Peacekeeping Operations",
+          "moderated_caucus_topics": [
+            "Robust mandates versus consent of the host state",
+            "Protection of civilians and accountability for misconduct",
+            "Funding gaps and troop contributor concerns",
+            "Exit strategies and handover to national forces"
+          ],
+          "key_frameworks": [
+            "Brahimi Report (2000)",
+            "Action for Peacekeeping (A4P) Declaration (2018)",
+            "Capstone Doctrine (2008)"
+          ]
+        },
+        {
+          "id": "sovereign-rights-and-resource-jurisdiction-in-the-arctic",
+          "title": "Sovereign Rights and Resource Jurisdiction in the Arctic",
+          "moderated_caucus_topics": [
+            "Overlapping continental shelf claims",
+            "New shipping routes as ice melts",
+            "Indigenous peoples' rights and consent",
+            "Militarisation and the Arctic Council's future"
+          ],
+          "key_frameworks": [
+            "UN Convention on the Law of the Sea (UNCLOS)",
+            "Ilulissat Declaration (2008)"
+          ]
+        },
+        {
+          "id": "advancing-self-determination-and-addressing-the-legacy-of-co",
+          "title": "Advancing Self-Determination and Addressing the Legacy of Colonialism",
+          "moderated_caucus_topics": [
+            "The 17 remaining Non-Self-Governing Territories",
+            "Referendums and the meaning of free choice",
+            "Reparations and the return of cultural property",
+            "Economic dependence after independence"
+          ],
+          "key_frameworks": [
+            "UNGA Resolution 1514 (1960) Declaration on Decolonization",
+            "UN Charter Chapter XI",
+            "ICJ Chagos Advisory Opinion (2019)"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "the-territorial-dispute-between-egypt-and-sudan-over-the-hal",
+          "title": "The Territorial Dispute between Egypt and Sudan over the Halayeb Triangle",
+          "theme": "Maritime and border disputes",
+          "theme_share_pct": null,
+          "seen_at": "Galabov MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "enhancing-the-effectiveness-of-peacekeeping-operations-in-th",
+          "title": "Enhancing the Effectiveness of Peacekeeping Operations in the Next Decade",
+          "theme": "Peacekeeping and peacebuilding",
+          "theme_share_pct": null,
+          "seen_at": "Lagos MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-israeli-settlements-in-the-occupied-palestinian-t",
+          "title": "Addressing Israeli Settlements in the Occupied Palestinian Territory",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Independent Prague MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "establishing-guidelines-to-ensure-peaceful-uses-of-outer-spa",
+          "title": "Establishing guidelines to ensure peaceful uses of Outer Space",
+          "theme": "Outer space",
+          "theme_share_pct": null,
+          "seen_at": "Perrott Hill British School MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "discussing-the-rights-of-indigenous-people-and-their-right-t",
+          "title": "Discussing the rights of indigenous people and their right to reparations",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "Independent Prague MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "establishing-guidelines-to-regulate-cyber-colonialism",
+          "title": "Establishing Guidelines to Regulate Cyber Colonialism",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "St George's British International School Rome MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-role-of-technology-in-the-destabilisation-of-fragile-dem",
+          "title": "The role of technology in the destabilisation of fragile democracies",
+          "theme": "Democracy and governance",
+          "theme_share_pct": null,
+          "seen_at": "Munich Diplomacy Summit",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-question-of-sovereign-rights-and-resource-jurisdiction-i",
+          "title": "The Question of Sovereign Rights and Resource Jurisdiction in the Arctic amid Intensifying Great-Power Competition",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Navrachana International MUN XVI",
+          "kind": "recent"
+        },
+        {
+          "id": "evaluating-efforts-for-implementing-self-governance-in-the-c",
+          "title": "Evaluating efforts for implementing self-governance in the Chagos Islands, with an emphasis on the autonomy of the indigenous population",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Vistula MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "protection-of-critical-undersea-and-space-based-infrastructu",
+          "title": "Protection of Critical Undersea and Space-Based Infrastructure During Geopolitical Conflict",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "ARCMUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "unhcr",
+      "name": "UN Refugee Agency",
+      "abbr": "UNHCR",
+      "category": "UN agency",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 41,
+      "mymun_topic_count": 702,
+      "typical_seats": 25,
+      "real_body": "Member states sit on the Executive Committee, which approves programmes and budget; work rests on the 1951 Refugee Convention",
+      "decision_rule": "Simple majority in Model UN",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Refugees and migration",
+          "share_pct": 90
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": 18
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": 15
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": 13
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": 4
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": 3
+        },
+        {
+          "theme": "Humanitarian crises",
+          "share_pct": 3
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "addressing-internal-displacement",
+          "title": "Addressing Internal Displacement",
+          "moderated_caucus_topics": [
+            "Protection of internally displaced people when their own state is responsible",
+            "Durable solutions: return, local integration, relocation",
+            "Climate- and disaster-driven displacement",
+            "Data and registration of displaced people"
+          ],
+          "key_frameworks": [
+            "Guiding Principles on Internal Displacement (1998)",
+            "Kampala Convention (2009)"
+          ]
+        },
+        {
+          "id": "refugee-access-to-jobs-and-financial-services",
+          "title": "Refugee Access to Jobs and Financial Services",
+          "moderated_caucus_topics": [
+            "Right to work laws in host countries",
+            "Recognition of refugees' qualifications",
+            "Bank accounts and digital ID for refugees",
+            "Burden-sharing with host countries"
+          ],
+          "key_frameworks": [
+            "1951 Refugee Convention Articles 17-19",
+            "Global Compact on Refugees (2018)"
+          ]
+        },
+        {
+          "id": "protecting-refugee-children",
+          "title": "Protecting Refugee Children",
+          "moderated_caucus_topics": [
+            "Unaccompanied minors and guardianship",
+            "Education in refugee camps",
+            "Statelessness of children born in exile",
+            "Child protection against trafficking"
+          ],
+          "key_frameworks": [
+            "Convention on the Rights of the Child",
+            "UNHCR #IBelong campaign to end statelessness"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "addressing-internal-displacement",
+          "title": "Addressing Internal Displacement",
+          "theme": "Refugees and migration",
+          "theme_share_pct": 90,
+          "seen_at": "Quarter MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "refugee-access-to-jobs-and-financial-services",
+          "title": "Refugee Access to Jobs and Financial Services",
+          "theme": "Economy and development",
+          "theme_share_pct": 18,
+          "seen_at": "Quarter MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "establishing-legal-protections-for-climate-and-disaster-disp",
+          "title": "Establishing Legal Protections for Climate and Disaster-Displaced Refugees",
+          "theme": "Climate and environment",
+          "theme_share_pct": 15,
+          "seen_at": "European MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-refugee-children",
+          "title": "Protecting Refugee Children",
+          "theme": "Women and children",
+          "theme_share_pct": 13,
+          "seen_at": "Quarter MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-refugees-from-discrimination-in-host-countries",
+          "title": "Protecting refugees from discrimination in host countries",
+          "theme": "Human rights",
+          "theme_share_pct": 4,
+          "seen_at": "Voices of Tomorrow MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "ensuring-the-protection-and-basic-rights-of-refugees-fleeing",
+          "title": "Ensuring the Protection and Basic Rights of Refugees Fleeing the Sudanese Civil Conflict",
+          "theme": "Armed conflicts",
+          "theme_share_pct": 3,
+          "seen_at": "Freiburg MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "improving-humanitarian-access-and-protection-for-refugees-af",
+          "title": "Improving humanitarian access and protection for refugees affected by armed conflicts",
+          "theme": "Humanitarian crises",
+          "theme_share_pct": 3,
+          "seen_at": "BrusselsMUN Junior",
+          "kind": "theme example"
+        },
+        {
+          "id": "integrating-refugees-into-host-communities",
+          "title": "Integrating refugees into host communities",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Nexus MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "maritime-displacement-and-asylum-access",
+          "title": "Maritime displacement and asylum access",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "MUNSA Barcelona",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "ecofin",
+      "name": "Economic and Financial Committee (GA Second Committee)",
+      "abbr": "ECOFIN",
+      "category": "General Assembly committee",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 32,
+      "mymun_topic_count": 302,
+      "typical_seats": 26,
+      "real_body": "All 193 member states; developing countries often negotiate as the Group of 77 and China",
+      "decision_rule": "Simple majority, no veto",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "the-growing-global-debt-crisis-and-its-impact-on-developing-",
+          "title": "The Growing Global Debt Crisis and Its Impact on Developing Economies",
+          "moderated_caucus_topics": [
+            "Debt restructuring under the G20 Common Framework",
+            "Debt-for-climate and debt-for-nature swaps",
+            "The role of private creditors and new lenders",
+            "Reforming IMF and World Bank lending conditions"
+          ],
+          "key_frameworks": [
+            "G20 Common Framework for Debt Treatments (2020)",
+            "Addis Ababa Action Agenda (2015)",
+            "SDG 17"
+          ]
+        },
+        {
+          "id": "reforming-global-tax-rules-for-the-ai-and-digital-economy",
+          "title": "Reforming Global Tax Rules for the AI and Digital Economy",
+          "moderated_caucus_topics": [
+            "Taxing digital services where users are, not where firms are based",
+            "A global minimum corporate tax",
+            "Developing countries' voice in tax rule-making",
+            "Illicit financial flows and profit shifting"
+          ],
+          "key_frameworks": [
+            "OECD/G20 Two-Pillar solution (2021)",
+            "UNGA Resolution 78/230 (2023) on international tax cooperation"
+          ]
+        },
+        {
+          "id": "mitigating-the-impact-of-trade-wars-on-low-income-countries",
+          "title": "Mitigating the Impact of Trade Wars on Low-Income Countries",
+          "moderated_caucus_topics": [
+            "Tariff escalation and supply chain shocks",
+            "Special and differential treatment at the WTO",
+            "Food and fertiliser export restrictions",
+            "Regional trade agreements as a buffer"
+          ],
+          "key_frameworks": [
+            "WTO Agreements",
+            "African Continental Free Trade Area (AfCFTA)"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "economic-competition-in-the-semiconductor-industry",
+          "title": "Economic Competition in the Semiconductor Industry",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "Conference of Global Youth",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-compromise-between-climate-change-policies-and-economic-",
+          "title": "The Compromise Between Climate Change Policies and Economic Progress",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "University of Sharjah MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "shaping-the-future-of-digital-economies-governance-innovatio",
+          "title": "Shaping the Future of Digital Economies: Governance, Innovation, and Financial Equity",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Lagos MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "combatting-transnational-financial-crimes-and-illicit-financ",
+          "title": "Combatting Transnational Financial Crimes and Illicit Financial Flows",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "Beirut MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "mitigating-the-impact-of-trade-wars-on-low-income-countries",
+          "title": "Mitigating the impact of trade wars on low-income countries",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Columba International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-worldwide-hiv-aids-outbreaks",
+          "title": "Addressing worldwide HIV/AIDS outbreaks",
+          "theme": "Health and pandemics",
+          "theme_share_pct": null,
+          "seen_at": "Shanghai American School Pudong MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "solving-the-issue-of-the-gender-pay-gap",
+          "title": "Solving the issue of the gender pay gap",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "Gymnázium Nad Alejí MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "evaluating-the-economic-impact-of-sanctions-on-developing-ec",
+          "title": "Evaluating the Economic Impact of Sanctions on Developing Economies Amid Prolonged Regional Conflicts",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Navrachana International MUN XVI",
+          "kind": "recent"
+        },
+        {
+          "id": "the-growing-global-debt-crisis-and-its-impact-on-economic-st",
+          "title": "The Growing Global Debt Crisis and Its Impact on Economic Stability, Development, and Future Generations",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Emirates Youth MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "discussing-the-us-dollar-dominance-of-the-global-trade-marke",
+          "title": "Discussing the US Dollar Dominance of the Global Trade Market and Finding Alternative Systems",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "RUYA MUN Amman",
+          "kind": "recent"
+        },
+        {
+          "id": "reforming-global-tax-rules-for-the-ai-and-digital-economy",
+          "title": "Reforming global tax rules for the AI and digital economy",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "VEX MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "nato",
+      "name": "North Atlantic Treaty Organization",
+      "abbr": "NATO",
+      "category": "Regional organisation",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 32,
+      "mymun_topic_count": 388,
+      "typical_seats": 23,
+      "real_body": "32 members (Finland joined 2023, Sweden 2024); Article 5 treats an attack on one as an attack on all",
+      "decision_rule": "North Atlantic Council decides by consensus, no vote",
+      "binding": "Allied decisions",
+      "themes": [
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Nuclear weapons and disarmament",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Outer space",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "combating-hybrid-threats-and-disinformation",
+          "title": "Combating Hybrid Threats and Disinformation",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Slovakia International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "preventing-escalation-in-the-south-caucasus-the-armenia-azer",
+          "title": "Preventing Escalation in the South Caucasus: The Armenia-Azerbaijan conflict",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "UAB MUN Barcelona",
+          "kind": "theme example"
+        },
+        {
+          "id": "reassessing-nuclear-deterrence-strategies",
+          "title": "Reassessing Nuclear Deterrence Strategies",
+          "theme": "Nuclear weapons and disarmament",
+          "theme_share_pct": null,
+          "seen_at": "Europe MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "energy-security-and-reducing-dependence-on-russian-gas",
+          "title": "Energy Security and Reducing Dependence on Russian Gas",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "MUN Amsterdam International Community School",
+          "kind": "theme example"
+        },
+        {
+          "id": "securing-the-final-frontier-nato-s-strategy-for-space-based-",
+          "title": "Securing the Final Frontier: NATO's Strategy for Space-Based Defense Systems",
+          "theme": "Outer space",
+          "theme_share_pct": null,
+          "seen_at": "International Rhetoric Conference",
+          "kind": "theme example"
+        },
+        {
+          "id": "assistance-for-the-refugee-and-migrant-crisis-in-the-aegean-",
+          "title": "Assistance for the Refugee and Migrant Crisis in the Aegean Sea",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "ESDAL MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-issue-of-maintaining-arctic-security-with-heightened-geo",
+          "title": "The Issue of Maintaining Arctic Security with Heightened Geopolitical Tensions",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Southwest MUN One Day Conference",
+          "kind": "recent"
+        },
+        {
+          "id": "strengthening-nato-s-open-door-policy-and-strategic-engageme",
+          "title": "Strengthening NATO's Open Door Policy and Strategic Engagement in the Western Balkans",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Rhodes Model Regional Co-operation",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "aippm",
+      "name": "All India Political Parties Meet",
+      "abbr": "AIPPM",
+      "category": "Indian committee",
+      "seat_type": "portfolio",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 24,
+      "mymun_topic_count": 145,
+      "typical_seats": null,
+      "real_body": "Delegates play named Indian politicians (union ministers, chief ministers, opposition leaders) instead of countries",
+      "decision_rule": "Organisers decide; usually a communiqué or resolution by majority",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Democracy and governance",
+          "share_pct": null
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Education and culture",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [
+        {
+          "id": "electoral-reforms-the-one-nation-one-election-debate",
+          "title": "Electoral Reforms: The One Nation One Election Debate",
+          "moderated_caucus_topics": [
+            "Constitutional amendments and the role of states",
+            "Cost savings versus federalism concerns",
+            "What happens when a state government falls mid-term",
+            "Impact on regional parties and voters' choices"
+          ],
+          "key_frameworks": [
+            "Report of the High-Level Committee on Simultaneous Elections (2024)",
+            "Constitution (One Hundred and Twenty-Ninth Amendment) Bill, 2024",
+            "Articles 83, 172 and 356 of the Constitution"
+          ]
+        },
+        {
+          "id": "implementation-of-a-uniform-civil-code-in-india",
+          "title": "Implementation of a Uniform Civil Code in India",
+          "moderated_caucus_topics": [
+            "Article 44 and the Directive Principles",
+            "Personal laws and minority rights",
+            "Uttarakhand's UCC as a model",
+            "Gender justice in marriage, divorce and inheritance"
+          ],
+          "key_frameworks": [
+            "Article 44 of the Constitution",
+            "Law Commission consultation paper (2018)",
+            "Uniform Civil Code, Uttarakhand Act (2024)"
+          ]
+        },
+        {
+          "id": "reforming-india-s-public-examination-system-after-the-neet-u",
+          "title": "Reforming India's Public Examination System After the NEET-UG Controversy",
+          "moderated_caucus_topics": [
+            "Paper leaks and exam security",
+            "The National Testing Agency's structure and accountability",
+            "Centralised versus state-level entrance tests",
+            "Student mental health and coaching culture"
+          ],
+          "key_frameworks": [
+            "Public Examinations (Prevention of Unfair Means) Act, 2024",
+            "Radhakrishnan Committee report on NTA reforms (2024)"
+          ]
+        }
+      ],
+      "agenda_library": [
+        {
+          "id": "electoral-reforms-one-nation-one-election-debate",
+          "title": "Electoral reforms: One Nation One Election debate",
+          "theme": "Democracy and governance",
+          "theme_share_pct": null,
+          "seen_at": "World Concord Assembly",
+          "kind": "theme example"
+        },
+        {
+          "id": "sustainable-development-and-federal-state-governance",
+          "title": "Sustainable Development and Federal State Governance",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "Global Diplomacy Summit",
+          "kind": "theme example"
+        },
+        {
+          "id": "freedom-of-speech-vs-national-security-concerns",
+          "title": "Freedom of speech vs national security concerns",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "World Concord Assembly",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-india-s-water-crisis-inter-state-disputes-and-sol",
+          "title": "Addressing India's Water Crisis: Inter-State Disputes and Solutions",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "Virtus MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "proposing-solutions-for-equitable-and-effective-education-re",
+          "title": "Proposing solutions for equitable and effective education reform",
+          "theme": "Education and culture",
+          "theme_share_pct": null,
+          "seen_at": "Student Diplomacy MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "deliberation-on-the-implementation-of-a-uniform-civil-code-i",
+          "title": "Deliberation on the Implementation of a Uniform Civil Code in India",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Technology & Diplomacy International Summit III",
+          "kind": "recent"
+        },
+        {
+          "id": "examining-procedural-and-security-lapses-in-the-conduct-of-n",
+          "title": "Examining Procedural and Security Lapses in the Conduct of NEET-UG 2026",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "The Theseus MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "deliberation-on-india-s-internal-security-strategy-following",
+          "title": "Deliberation on India's internal security strategy following the 2024 Pahalgam terror attack in Jammu and Kashmir",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Global Diplomatic Summit II",
+          "kind": "recent"
+        },
+        {
+          "id": "deliberating-upon-the-constitutional-political-and-electoral",
+          "title": "Deliberating upon the constitutional, political and electoral implications of delimitation",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Selene Argo MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "icc",
+      "name": "International Criminal Court",
+      "abbr": "ICC",
+      "category": "Court",
+      "seat_type": "court_role",
+      "difficulty": "Advanced",
+      "mymun_upcoming_conferences": 19,
+      "mymun_topic_count": 154,
+      "typical_seats": 12,
+      "real_body": "Tries individuals, not states; Model UN runs it as a trial with prosecution, defence and judges",
+      "decision_rule": "Judges' verdict",
+      "binding": "Verdict",
+      "themes": [
+        {
+          "theme": "International law and justice",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "the-prosecutor-v-jean-pierre-bemba-gombo",
+          "title": "The Prosecutor v. Jean-Pierre Bemba Gombo",
+          "theme": "International law and justice",
+          "theme_share_pct": null,
+          "seen_at": "EMERGE Zambia National MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "prosecutor-v-al-hassan-ag-abdoul-aziz-ag-mohamed-ag-mahmoud",
+          "title": "Prosecutor v. Al Hassan Ag Abdoul Aziz Ag Mohamed Ag Mahmoud",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "Płock MUN",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "wto",
+      "name": "World Trade Organization",
+      "abbr": "WTO",
+      "category": "Other international body",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 18,
+      "mymun_topic_count": 148,
+      "typical_seats": 20,
+      "real_body": "160-plus members",
+      "decision_rule": "Consensus of the whole membership",
+      "binding": "Agreements bind members",
+      "themes": [
+        {
+          "theme": "Economy and development",
+          "share_pct": 59
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": 7
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": 7
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": 5
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": 4
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "addressing-global-trade-tensions-and-the-resurgence-of-econo",
+          "title": "Addressing Global Trade Tensions and the Resurgence of Economic Protectionism",
+          "theme": "Economy and development",
+          "theme_share_pct": 59,
+          "seen_at": "Paris International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "managing-the-effects-of-the-russo-ukrainian-conflict-on-glob",
+          "title": "Managing the Effects of the Russo-Ukrainian Conflict on Global Trade and Supply Chains",
+          "theme": "Armed conflicts",
+          "theme_share_pct": 7,
+          "seen_at": "ITU MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "trade-governance-in-the-era-of-artificial-intelligence-and-d",
+          "title": "Trade Governance in the Era of Artificial Intelligence and Data Sovereignty",
+          "theme": "Cyber and AI",
+          "theme_share_pct": 7,
+          "seen_at": "London International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "pharmaceuticals-and-intellectual-property-rights",
+          "title": "Pharmaceuticals and Intellectual Property Rights",
+          "theme": "Health and pandemics",
+          "theme_share_pct": 5,
+          "seen_at": "NAIMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "improving-the-climate-sustainability-of-trade-transport-infr",
+          "title": "Improving the climate sustainability of trade transport infrastructure",
+          "theme": "Climate and environment",
+          "theme_share_pct": 4,
+          "seen_at": "Cambridge MUN",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "futuristic",
+      "name": "Futuristic committee",
+      "abbr": "Futuristic",
+      "category": "Special format",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 18,
+      "mymun_topic_count": 117,
+      "typical_seats": 17,
+      "real_body": "Set at a future date the organisers define; delegates debate events that have not happened yet",
+      "decision_rule": "Simple majority",
+      "binding": "In-scenario",
+      "themes": [
+        {
+          "theme": "Future and science fiction",
+          "share_pct": 36
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": 7
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": 5
+        },
+        {
+          "theme": "Outer space",
+          "share_pct": 4
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "the-apocalypse-2050",
+          "title": "The Apocalypse, 2050",
+          "theme": "Future and science fiction",
+          "theme_share_pct": 36,
+          "seen_at": "Vistula MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-rise-of-an-ai-rebellion-against-human-overlords",
+          "title": "The rise of an AI rebellion against human overlords",
+          "theme": "Cyber and AI",
+          "theme_share_pct": 7,
+          "seen_at": "Taylor's International School Puchong MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-climate-refugee-crisis-on-a-degrading-earth",
+          "title": "The climate refugee crisis on a degrading Earth",
+          "theme": "Climate and environment",
+          "theme_share_pct": 5,
+          "seen_at": "EPFL MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "preventing-the-militarisation-of-near-earth-asteroid-mining-",
+          "title": "Preventing the Militarisation of Near-Earth Asteroid Mining and Resource Extraction",
+          "theme": "Outer space",
+          "theme_share_pct": 4,
+          "seen_at": "Maasmun",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "legal",
+      "name": "Legal Committee (GA Sixth Committee)",
+      "abbr": "LEGAL",
+      "category": "General Assembly committee",
+      "seat_type": "country",
+      "difficulty": "Advanced",
+      "mymun_upcoming_conferences": 17,
+      "mymun_topic_count": 214,
+      "typical_seats": null,
+      "real_body": "All 193 member states",
+      "decision_rule": "Simple majority, no veto",
+      "binding": "Recommendations, not binding",
+      "themes": [
+        {
+          "theme": "International law and justice",
+          "share_pct": null
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": null
+        },
+        {
+          "theme": "Democracy and governance",
+          "share_pct": null
+        },
+        {
+          "theme": "Terrorism and extremism",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "deliberation-upon-the-violation-of-sovereignty-under-interna",
+          "title": "Deliberation upon the violation of sovereignty under international law",
+          "theme": "International law and justice",
+          "theme_share_pct": null,
+          "seen_at": "Virtual Reality MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "strengthening-international-laws-to-prevent-cyber-warfare",
+          "title": "Strengthening International Laws to Prevent Cyber Warfare",
+          "theme": "Cyber and AI",
+          "theme_share_pct": null,
+          "seen_at": "Masaryk University MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "protecting-the-human-right-to-a-fair-trial",
+          "title": "Protecting the human right to a fair trial",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "Farel Academy MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "combating-corruption-and-money-laundering-through-internatio",
+          "title": "Combating Corruption and Money Laundering through International Legal Cooperation",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "International Rhetoric Conference",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-issue-of-legal-pathways-and-access-to-justice",
+          "title": "Addressing the Issue of Legal Pathways and Access to Justice for Climate Refugees",
+          "theme": "Climate and environment",
+          "theme_share_pct": null,
+          "seen_at": "London International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "reducing-foreign-interference-in-national-elections-and-demo",
+          "title": "Reducing foreign interference in national elections and democratic institutions",
+          "theme": "Democracy and governance",
+          "theme_share_pct": null,
+          "seen_at": "ABBA MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "measures-to-eliminate-international-terrorism",
+          "title": "Measures to eliminate international terrorism",
+          "theme": "Terrorism and extremism",
+          "theme_share_pct": null,
+          "seen_at": "WFUNA International MUN Singapore",
+          "kind": "theme example"
+        },
+        {
+          "id": "climate-harm-as-an-international-wrong-defining-state-obliga",
+          "title": "Climate Harm as an International Wrong: Defining State Obligations and Accountability under International Law",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "The European International MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "the-question-of-the-legal-protection-of-children-in-online-s",
+          "title": "The Question of the Legal Protection of Children in Online Spaces",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Northbridge International School Cambodia MUN",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "undp",
+      "name": "UN Development Programme",
+      "abbr": "UNDP",
+      "category": "UN agency",
+      "seat_type": "country",
+      "difficulty": "Beginner",
+      "mymun_upcoming_conferences": 16,
+      "mymun_topic_count": 187,
+      "typical_seats": null,
+      "real_body": "36-member Executive Board",
+      "decision_rule": "Simple majority in Model UN",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Economy and development",
+          "share_pct": 34
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": 15
+        },
+        {
+          "theme": "Health and pandemics",
+          "share_pct": 9
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": 7
+        },
+        {
+          "theme": "Humanitarian crises",
+          "share_pct": 5
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": 4
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "financing-climate-adaptation-for-developing-nations",
+          "title": "Financing Climate Adaptation for Developing Nations",
+          "theme": "Economy and development",
+          "theme_share_pct": 34,
+          "seen_at": "DLMUN Climate Summit VI",
+          "kind": "theme example"
+        },
+        {
+          "id": "advancing-sustainable-poverty-alleviation-through-green-jobs",
+          "title": "Advancing Sustainable Poverty Alleviation Through Green Jobs and Renewable Industries",
+          "theme": "Climate and environment",
+          "theme_share_pct": 15,
+          "seen_at": "Diplomatia International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "devising-measures-to-bridge-the-digital-divide-in-education-",
+          "title": "Devising Measures to Bridge the Digital Divide in Education Post-COVID-19",
+          "theme": "Health and pandemics",
+          "theme_share_pct": 9,
+          "seen_at": "DLMUN Conference V",
+          "kind": "theme example"
+        },
+        {
+          "id": "harnessing-ai-to-achieve-sdgs-1-2-and-3",
+          "title": "Harnessing AI to achieve SDGs 1, 2 and 3",
+          "theme": "Cyber and AI",
+          "theme_share_pct": 7,
+          "seen_at": "Do Your Best MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "humanitarian-aid-in-blockaded-or-occupied-territories-ensuri",
+          "title": "Humanitarian Aid in Blockaded or Occupied Territories: Ensuring Access to Civilians",
+          "theme": "Humanitarian crises",
+          "theme_share_pct": 5,
+          "seen_at": "Miras International School MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "aiding-sustainable-development-and-the-rebuilding-of-war-tor",
+          "title": "Aiding Sustainable Development and the Rebuilding of War-Torn Middle Eastern Nations",
+          "theme": "Armed conflicts",
+          "theme_share_pct": 4,
+          "seen_at": "Belgrade International MUN",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "interpol",
+      "name": "INTERPOL",
+      "abbr": "INTERPOL",
+      "category": "Other international body",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 16,
+      "mymun_topic_count": 114,
+      "typical_seats": null,
+      "real_body": "196 member countries; each delegate represents a country's police",
+      "decision_rule": "Simple majority in Model UN",
+      "binding": "Not binding",
+      "themes": [
+        {
+          "theme": "Crime and drugs",
+          "share_pct": 51
+        },
+        {
+          "theme": "Cyber and AI",
+          "share_pct": 20
+        },
+        {
+          "theme": "Terrorism and extremism",
+          "share_pct": 9
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": 5
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": 4
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "combating-the-rise-of-financial-fraud-with-an-emphasis-on-de",
+          "title": "Combating the rise of financial fraud with an emphasis on deepfakes",
+          "theme": "Crime and drugs",
+          "theme_share_pct": 51,
+          "seen_at": "TE Vizja MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "neutralizing-state-sponsored-cyber-sanctuaries-and-sovereign",
+          "title": "Neutralizing State-Sponsored Cyber-Sanctuaries and Sovereign Immunity",
+          "theme": "Cyber and AI",
+          "theme_share_pct": 20,
+          "seen_at": "Harmony Youth MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "preventing-the-financing-of-violent-extremist-groups",
+          "title": "Preventing the Financing of Violent Extremist Groups",
+          "theme": "Terrorism and extremism",
+          "theme_share_pct": 9,
+          "seen_at": "Beirut MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "curbing-illicit-financial-flows-in-an-era-of-cryptocurrencie",
+          "title": "Curbing illicit financial flows in an era of cryptocurrencies and digital exchanges",
+          "theme": "Economy and development",
+          "theme_share_pct": 5,
+          "seen_at": "Lyon International MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "combating-transnational-child-trafficking-networks",
+          "title": "Combating transnational child trafficking networks",
+          "theme": "Women and children",
+          "theme_share_pct": 4,
+          "seen_at": "LyonMUN",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "arab-league",
+      "name": "League of Arab States",
+      "abbr": "Arab League",
+      "category": "Regional organisation",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 13,
+      "mymun_topic_count": 178,
+      "typical_seats": 20,
+      "real_body": "22 member states, including the State of Palestine",
+      "decision_rule": "Consensus or majority (majority decisions bind only those who vote for them)",
+      "binding": "Partly",
+      "themes": [
+        {
+          "theme": "Armed conflicts",
+          "share_pct": 18
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": 6
+        },
+        {
+          "theme": "Terrorism and extremism",
+          "share_pct": 6
+        },
+        {
+          "theme": "Climate and environment",
+          "share_pct": 4
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": 3
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "the-1990-arab-league-emergency-session-on-iraq-s-invasion-of",
+          "title": "The 1990 Arab League Emergency Session on Iraq's Invasion of Kuwait",
+          "theme": "Armed conflicts",
+          "theme_share_pct": 18,
+          "seen_at": "PolarisMUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "strategies-for-reducing-dependence-on-oil-and-fostering-econ",
+          "title": "Strategies for reducing dependence on oil and fostering economic growth",
+          "theme": "Economy and development",
+          "theme_share_pct": 6,
+          "seen_at": "Poznań MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "countering-terrorism-in-the-region",
+          "title": "Countering terrorism in the region",
+          "theme": "Terrorism and extremism",
+          "theme_share_pct": 6,
+          "seen_at": "IMUN Alkmaar",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-water-scarcity-and-regional-water-security-in-mem",
+          "title": "Addressing Water Scarcity and Regional Water Security in Member States",
+          "theme": "Climate and environment",
+          "theme_share_pct": 4,
+          "seen_at": "Raszyńska MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-domestic-violence-against-women",
+          "title": "Addressing domestic violence against women",
+          "theme": "Women and children",
+          "theme_share_pct": 3,
+          "seen_at": "Lublin MUN",
+          "kind": "theme example"
+        }
+      ]
+    },
+    {
+      "id": "lok-sabha",
+      "name": "Lok Sabha",
+      "abbr": "Lok Sabha",
+      "category": "Indian committee",
+      "seat_type": "portfolio",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 12,
+      "mymun_topic_count": 82,
+      "typical_seats": null,
+      "real_body": "543 elected seats in the real house; in Model UN, named members such as the Prime Minister and opposition leaders, with the Speaker presiding",
+      "decision_rule": "Bills pass by majority; money bills start here; no-confidence motions are moved here",
+      "binding": "Mock legislation",
+      "themes": [
+        {
+          "theme": "Democracy and governance",
+          "share_pct": null
+        },
+        {
+          "theme": "Education and culture",
+          "share_pct": null
+        },
+        {
+          "theme": "Human rights",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "uniform-civil-code-constitutional-principles-minority-rights",
+          "title": "Uniform Civil Code: Constitutional principles, minority rights, and federal implications",
+          "theme": "Democracy and governance",
+          "theme_share_pct": null,
+          "seen_at": "DMUN Model Parliament and Congress",
+          "kind": "theme example"
+        },
+        {
+          "id": "new-education-policy-2026-socio-economic-and-academic-develo",
+          "title": "New Education Policy 2026: socio-economic and academic development of teachers and students",
+          "theme": "Education and culture",
+          "theme_share_pct": null,
+          "seen_at": "All Asia NODMUN IV",
+          "kind": "theme example"
+        },
+        {
+          "id": "censorship-vs-freedom-of-speech-striking-the-right-balance",
+          "title": "Censorship vs. Freedom of Speech: Striking the Right Balance",
+          "theme": "Human rights",
+          "theme_share_pct": null,
+          "seen_at": "Central India Summit",
+          "kind": "theme example"
+        },
+        {
+          "id": "discussion-on-the-neet-ug-2026-crisis-and-comprehensive-refo",
+          "title": "Discussion on the NEET-UG 2026 Crisis and Comprehensive Reforms to India's Public Examination System",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "SIMUN Debate IV",
+          "kind": "recent"
+        },
+        {
+          "id": "delimitation-and-women-reservation",
+          "title": "Delimitation and Women Reservation",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Civic Rise Forum MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "deliberation-upon-centre-state-power-relations-with-special-",
+          "title": "Deliberation Upon Centre-State Power Relations, With Special Emphasis on National Security",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "Samvaad MUN",
+          "kind": "recent"
+        },
+        {
+          "id": "reforming-india-s-data-protection-framework-privacy-surveill",
+          "title": "Reforming India's Data Protection Framework: Privacy, surveillance, and state accountability",
+          "theme": null,
+          "theme_share_pct": null,
+          "seen_at": "DMUN Model Parliament and Congress",
+          "kind": "recent"
+        }
+      ]
+    },
+    {
+      "id": "african-union",
+      "name": "African Union",
+      "abbr": "AU",
+      "category": "Regional organisation",
+      "seat_type": "country",
+      "difficulty": "Intermediate",
+      "mymun_upcoming_conferences": 10,
+      "mymun_topic_count": 191,
+      "typical_seats": null,
+      "real_body": "55 member states; 15-member Peace and Security Council",
+      "decision_rule": "Consensus, or two thirds of the Assembly",
+      "binding": "Assembly decisions",
+      "themes": [
+        {
+          "theme": "Terrorism and extremism",
+          "share_pct": null
+        },
+        {
+          "theme": "Economy and development",
+          "share_pct": null
+        },
+        {
+          "theme": "Armed conflicts",
+          "share_pct": null
+        },
+        {
+          "theme": "Democracy and governance",
+          "share_pct": null
+        },
+        {
+          "theme": "Refugees and migration",
+          "share_pct": null
+        },
+        {
+          "theme": "Women and children",
+          "share_pct": null
+        },
+        {
+          "theme": "Crime and drugs",
+          "share_pct": null
+        }
+      ],
+      "featured_agendas": [],
+      "agenda_library": [
+        {
+          "id": "combating-extremism-and-terrorism-in-africa",
+          "title": "Combating Extremism and Terrorism in Africa",
+          "theme": "Terrorism and extremism",
+          "theme_share_pct": null,
+          "seen_at": "DMUN Model African Union",
+          "kind": "theme example"
+        },
+        {
+          "id": "the-african-union-and-the-chinese-dragon-economic-growth-or-",
+          "title": "The African Union and the Chinese Dragon: Economic growth or economic dependence?",
+          "theme": "Economy and development",
+          "theme_share_pct": null,
+          "seen_at": "UAB MUN Barcelona",
+          "kind": "theme example"
+        },
+        {
+          "id": "western-sahara-conflict",
+          "title": "Western Sahara Conflict",
+          "theme": "Armed conflicts",
+          "theme_share_pct": null,
+          "seen_at": "HNMUN Latin America",
+          "kind": "theme example"
+        },
+        {
+          "id": "fight-against-military-coups-in-africa",
+          "title": "Fight against military coups in Africa",
+          "theme": "Democracy and governance",
+          "theme_share_pct": null,
+          "seen_at": "AIMUN Liberia",
+          "kind": "theme example"
+        },
+        {
+          "id": "addressing-the-forced-displacement-of-populations-due-to-con",
+          "title": "Addressing the forced displacement of populations due to conflict in Africa",
+          "theme": "Refugees and migration",
+          "theme_share_pct": null,
+          "seen_at": "Farel Academy MUN",
+          "kind": "theme example"
+        },
+        {
+          "id": "eliminating-the-recruitment-of-child-soldiers-in-africa",
+          "title": "Eliminating the Recruitment of Child Soldiers in Africa",
+          "theme": "Women and children",
+          "theme_share_pct": null,
+          "seen_at": "SOAS MUN II",
+          "kind": "theme example"
+        },
+        {
+          "id": "combating-the-role-of-armed-groups-in-the-illicit-exploitati",
+          "title": "Combating the Role of Armed Groups in the Illicit Exploitation of Natural Resources",
+          "theme": "Crime and drugs",
+          "theme_share_pct": null,
+          "seen_at": "IE University MUN",
+          "kind": "theme example"
+        }
+      ]
+    }
+  ]
+}

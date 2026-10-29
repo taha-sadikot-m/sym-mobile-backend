@@ -1,0 +1,65 @@
+# Render blueprint. Virginia, next to the Neon database (us-east-1). See docs/DEPLOY.md.
+envVarGroups:
+  # Shared by the API and the scheduled jobs so they always use the same database and secrets.
+  - name: sym-mobile
+    envVars:
+      - key: ENVIRONMENT
+        value: staging # change to "production" for the launch service
+      - key: DATABASE_URL
+        sync: false # postgresql+asyncpg://<user>:<password>@<pooled host>/<db>?ssl=require
+      - key: DATABASE_POOLED
+        value: "true"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CONTRACT_CHECK_ON_STARTUP
+        value: "true"
+      # Render's proxy adds one X-Forwarded-For entry; only that one can be trusted (core/client_ip.py).
+      - key: TRUSTED_PROXY_HOPS
+        value: "1"
+      - key: EMAIL_DELIVERY
+        value: resend
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DEEPGRAM_API_KEY
+        sync: false
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: PUSH_ENABLED
+        value: "true"
+      - key: EXPO_ACCESS_TOKEN
+        sync: false # only if "Enhanced push security" is on in the Expo project
+
+services:
+  - type: web
+    name: sym-mobile-backend
+    runtime: docker
+    region: virginia
+    plan: starter
+    branch: main
+    healthCheckPath: /health
+    # Migrations touch only the `mobile` schema. If they fail, the deploy stops and the old version keeps running.
+    preDeployCommand: alembic upgrade head
+    envVars:
+      - fromGroup: sym-mobile
+
+  # Debate reminders every 5 minutes, and the daily data clean-up (app/jobs.py).
+  - type: cron
+    name: sym-mobile-jobs
+    runtime: docker
+    region: virginia
+    plan: starter
+    branch: main
+    schedule: "*/5 * * * *"
+    dockerCommand: python -m app.jobs
+    envVars:
+      - fromGroup: sym-mobile

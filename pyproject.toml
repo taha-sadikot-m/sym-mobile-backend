@@ -1,0 +1,73 @@
+[project]
+name = "sym-mobile-backend"
+version = "0.1.0"
+description = "Backend and admin console for the Speak Your Mind mobile app"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "asyncpg>=0.30",
+    "alembic>=1.14",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "email-validator>=2.2",
+    "argon2-cffi>=23.1",
+    "pyotp>=2.9",
+    "segno>=1.6",
+    "python-multipart>=0.0.32",
+    "pyjwt>=2.15.1",
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "httpx>=0.28",
+    "ruff>=0.8",
+    "mypy>=1.13",
+    # Only used by tests, to prove our password hashes match real Django's.
+    "django>=5.2,<5.3",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "ASYNC", "RUF"]
+# RUF001: user-facing messages use typographic apostrophes on purpose.
+ignore = ["S101", "RUF001"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106"]
+# A local developer tool: fixed test password, random think-times, a log file read between requests.
+"scripts/load_test.py" = ["S105", "S311", "ASYNC240"]
+"migrations/**" = ["E501", "I001"]
+# Prompt wording reads better unwrapped.
+"app/modules/mun/ai.py" = ["E501"]
+"app/modules/debates/ai.py" = ["E501"]
+"app/modules/live/judge.py" = ["E501"]
+# A line-for-line port of the app's judge; kept matching the TypeScript layout.
+"app/modules/live/fallback.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+exclude = ["migrations/", "admin/"]
+
+[[tool.mypy.overrides]]
+module = ["segno", "pyotp"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+testpaths = ["tests"]

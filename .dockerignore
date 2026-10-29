@@ -1,0 +1,14 @@
+.git
+.github
+.env
+.env.*
+.venv
+**/__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache
+admin/node_modules
+app/static/admin
+tests
+db
+docker-compose.yml
