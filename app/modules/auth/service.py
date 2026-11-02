@@ -59,8 +59,13 @@ async def password_matches(password: str, encoded: str) -> bool:
 # ---------- Email codes ----------
 
 
-async def send_code(session: AsyncSession, user: WebUser, purpose: CodePurpose) -> None:
-    """Replace any earlier code for this purpose and email a new one (the caller commits)."""
+async def send_code(
+    session: AsyncSession, user: WebUser, purpose: CodePurpose, *, to: str | None = None
+) -> None:
+    """Replace any earlier code for this purpose and email a new one (the caller commits).
+
+    `to` sends it somewhere else (a parent's address for consent).
+    """
     await session.execute(
         delete(EmailCode).where(
             EmailCode.user_id == user.id, EmailCode.purpose == purpose, EmailCode.used_at.is_(None)
@@ -77,7 +82,10 @@ async def send_code(session: AsyncSession, user: WebUser, purpose: CodePurpose) 
     )
     await session.flush()
     # Sent after the response is ready would be nicer, but a code that never arrives is worse: send now.
-    await mail.send(mail.code_email(to=user.email, name=user.full_name, code=code, purpose=purpose))
+    if purpose == CodePurpose.PARENT_CONSENT:
+        await mail.send(mail.consent_email(to=to or user.email, student=user.full_name, code=code))
+    else:
+        await mail.send(mail.code_email(to=user.email, name=user.full_name, code=code, purpose=purpose))
 
 
 async def use_code(session: AsyncSession, user: WebUser, purpose: CodePurpose, code: str) -> None:

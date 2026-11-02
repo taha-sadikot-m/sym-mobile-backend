@@ -28,6 +28,7 @@ from app.modules.auth.deps import CurrentStudent, Session
 from app.modules.live import alerts, fallback, service
 from app.modules.live import judge as live_judge
 from app.modules.live.clock import done_at_ms
+from app.modules.me import safety
 from app.web.users import users
 
 router = APIRouter(prefix="/v1", tags=["live debates"])
@@ -54,6 +55,13 @@ async def _out(session: Session, *challenges: Challenge) -> list[dict[str, Any]]
     return [service.serialize(challenge, who) for challenge in challenges]
 
 
+def _require_live_allowed(profile: Profile) -> None:
+    """Age known, and a parent's consent for under-18s (spec: consent before 1 vs 1)."""
+    blocked = safety.live_block_reason(profile)
+    if blocked:
+        raise problem(status.HTTP_403_FORBIDDEN, blocked[0], blocked[1])
+
+
 def _expire(challenge: Challenge) -> None:
     if (
         challenge.status in (ChallengeStatus.PENDING, ChallengeStatus.COUNTERED)
@@ -78,6 +86,10 @@ async def search_users(
 ) -> list[PersonOut]:
     """Other app students by @username or name. Blocked people and paused accounts never appear."""
     await ratelimit.hit(f"search:{student.id}", limit=120, per_seconds=60 * 10)
+    band = safety.age_band(student.profile)
+    if band is None:
+        return []
+    oldest, youngest = safety.birth_years(band)
     needle = q.strip().lstrip("@").lower()
     blocked = (
         select(Block.blocked_id)
@@ -92,6 +104,7 @@ async def search_users(
             users.c.is_active,
             Profile.app_status == AppStatus.ACTIVE,
             users.c.id.not_in(blocked),
+            Profile.birth_year.between(oldest, youngest),
             or_(func.lower(Profile.username).startswith(needle), users.c.full_name.ilike(f"%{needle}%")),
         )
         .order_by(func.lower(Profile.username) == needle, users.c.full_name)
@@ -128,6 +141,7 @@ async def create_challenge(
 ) -> dict[str, Any]:
     if not await service.live_enabled(session):
         raise problem(status.HTTP_403_FORBIDDEN, "Live debates are switched off right now.", "feature_off")
+    _require_live_allowed(student.profile)
     await ratelimit.hit(f"challenge:{student.id}", limit=30, per_seconds=24 * 60 * 60)
     if await service.pending_count(session, student.id) >= 10:
         raise problem(
@@ -143,7 +157,11 @@ async def create_challenge(
                 status.HTTP_422_UNPROCESSABLE_CONTENT, "You can’t challenge yourself.", "invalid_opponent"
             )
         opponent = await session.get(Profile, body.opponent_id)
-        if opponent is None or opponent.app_status != AppStatus.ACTIVE:
+        if (
+            opponent is None
+            or opponent.app_status != AppStatus.ACTIVE
+            or not safety.same_band(student.profile, opponent)
+        ):
             raise problem(status.HTTP_404_NOT_FOUND, "That student isn’t available.", "not_found")
         if await service.blocked_between(session, student.id, body.opponent_id):
             raise problem(status.HTTP_404_NOT_FOUND, "That student isn’t available.", "not_found")
@@ -202,6 +220,10 @@ async def open_invite(
     if challenge.opponent_id is None and challenge.challenger_id != student.id:
         if challenge.status != ChallengeStatus.PENDING:
             raise problem(status.HTTP_410_GONE, "This invite has expired.", "expired")
+        _require_live_allowed(student.profile)
+        challenger = await session.get(Profile, challenge.challenger_id)
+        if challenger is None or not safety.same_band(student.profile, challenger):
+            raise problem(status.HTTP_404_NOT_FOUND, "That invite link isn’t valid.", "not_found")
         if await service.blocked_between(session, challenge.challenger_id, student.id):
             raise problem(status.HTTP_404_NOT_FOUND, "That invite link isn’t valid.", "not_found")
         challenge.opponent_id = student.id
@@ -231,6 +253,7 @@ async def accept(
     challenge_id: uuid.UUID, student: CurrentStudent, session: Session, background: BackgroundTasks
 ) -> dict[str, Any]:
     challenge = await _mine(session, challenge_id, student.id)
+    _require_live_allowed(student.profile)
     _expire(challenge)
     waiting_on_me = (challenge.status == ChallengeStatus.PENDING and challenge.opponent_id == student.id) or (
         challenge.status == ChallengeStatus.COUNTERED and challenge.countered_by != student.id

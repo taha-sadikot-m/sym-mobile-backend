@@ -27,6 +27,30 @@ class Email:
 outbox: deque[Email] = deque(maxlen=50)
 
 
+def consent_email(*, to: str, student: str, code: str) -> Email:
+    """Sent to a parent or guardian: the code they share with the student to agree to live debates."""
+    first = student.split(" ")[0] if student else "Your child"
+    subject = f"{code} — {first} is asking to join live debates on Speak Your Mind"
+    lead = (
+        f"{first} uses Speak Your Mind, SYM Education's practice app for debate and Model UN. "
+        "Live 1:1 debates let them debate another student of a similar age by voice, with an AI judge. "
+        "Recordings are never stored, students can't chat with each other, "
+        "and anyone can be reported or blocked."
+    )
+    ask = f"If you agree, give {first} this code to enter in the app:"
+    footer = "It expires in 15 minutes. If you don't agree, ignore this email and live debates stay off."
+    text = f"Hello,\n\n{lead}\n\n{ask}\n\n{code}\n\n{footer}\n\nSpeak Your Mind · SYM Education"
+    body = (
+        '<div style="font-family:Inter,Arial,sans-serif;max-width:480px;margin:auto;color:#0f1b33">'
+        f"<p>Hello,</p><p>{html.escape(lead)}</p><p>{html.escape(ask)}</p>"
+        '<p style="font-size:32px;letter-spacing:8px;font-weight:700;color:#012a6c;background:#f5f6fa;'
+        f'padding:16px;text-align:center;border-radius:12px">{code}</p>'
+        f'<p style="color:#6b7280;font-size:13px">{html.escape(footer)}</p>'
+        "<p>Speak Your Mind · SYM Education</p></div>"
+    )
+    return Email(to=to, subject=subject, text=text, html=body)
+
+
 def code_email(*, to: str, name: str, code: str, purpose: str) -> Email:
     first = name.split(" ")[0] if name else "there"
     if purpose == "verify_email":

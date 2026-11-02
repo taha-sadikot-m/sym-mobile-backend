@@ -8,6 +8,7 @@ import jwt
 import pytest
 from sqlalchemy import select, update
 
+from app.core import email
 from app.core.db import SessionLocal
 from app.main import app
 from app.models.base import utcnow
@@ -15,7 +16,7 @@ from app.models.live import Challenge, UserReport
 from app.modules.live import router as live_router
 from app.modules.live import service
 from app.web.debates import debate_results, debate_sessions, user_debate_stats
-from tests.test_student_auth import auth, signed_up_and_verified
+from tests.test_student_auth import auth, last_code, signed_up_and_verified
 
 TOPIC = {
     "id": "homework",
@@ -39,7 +40,17 @@ async def make_pair(client: httpx.AsyncClient) -> Pair:
     await client.patch("/v1/me", headers=b, json={"username": "kabir_s", "full_name": "Kabir Shah"})
     a_id = (await client.get("/v1/me", headers=a)).json()["id"]
     b_id = (await client.get("/v1/me", headers=b)).json()["id"]
+    # Both are 15: their parents confirm by email code, as in the app.
+    await parent_confirms(client, a, "riya.parent@home.in")
+    await parent_confirms(client, b, "kabir.parent@home.in")
     return Pair(client, a, b, a_id, b_id)
+
+
+async def parent_confirms(client: httpx.AsyncClient, headers: dict[str, str], parent: str) -> None:
+    sent = await client.post("/v1/me/consent", headers=headers, json={"parent_email": parent})
+    assert sent.status_code == 200, sent.text
+    confirmed = await client.post("/v1/me/consent/confirm", headers=headers, json={"code": last_code(parent)})
+    assert confirmed.json()["consent_status"] == "confirmed"
 
 
 @pytest.fixture
@@ -320,3 +331,53 @@ async def test_moderators_resolve_reports_and_can_pause_access(pair: Pair, admin
     assert (await moderator.post(f"/admin/api/live/challenges/{room}/cancel")).json() == {
         "status": "cancelled"
     }
+
+
+async def test_parent_consent_by_email_code() -> None:
+    async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as client:
+        tokens = auth(await signed_up_and_verified(client, "meera@school.in"))
+        assert (await client.get("/v1/me", headers=tokens)).json()["consent_status"] == "pending"
+        own = await client.post("/v1/me/consent", headers=tokens, json={"parent_email": "meera@school.in"})
+        assert own.status_code == 422
+        await client.post("/v1/me/consent", headers=tokens, json={"parent_email": "mum@home.in"})
+        mail = next(item for item in reversed(email.outbox) if item.to == "mum@home.in")
+        assert "live debates" in mail.subject and "Meera" not in mail.to
+        wrong = await client.post("/v1/me/consent/confirm", headers=tokens, json={"code": "000000"})
+        assert wrong.status_code == 400
+        await client.post("/v1/me/consent/confirm", headers=tokens, json={"code": last_code("mum@home.in")})
+        me = (await client.get("/v1/me", headers=tokens)).json()
+        assert (me["consent_status"], me["parent_email"]) == ("confirmed", "mum@home.in")
+
+
+async def test_live_needs_consent_and_the_same_age_band(pair: Pair) -> None:
+    young = auth(await signed_up_and_verified(pair.client, "zoya@school.in"))
+    await pair.client.patch("/v1/me", headers=young, json={"username": "zoya_k", "age": 12})
+    blocked = await pair.client.post(
+        "/v1/challenges",
+        headers=young,
+        json={
+            "topic": TOPIC,
+            "format": "quick",
+            "side_preference": "for",
+            "scheduled_at": (utcnow() + timedelta(hours=1)).isoformat(),
+        },
+    )
+    assert blocked.json()["detail"]["code"] == "consent_required"
+    await parent_confirms(pair.client, young, "zoya.parent@home.in")
+    # A 12-year-old never sees or reaches the 15-year-olds.
+    assert (await pair.client.get("/v1/users/search", headers=young, params={"q": "riya"})).json() == []
+    across = await pair.client.post(
+        "/v1/challenges",
+        headers=young,
+        json={
+            "topic": TOPIC,
+            "format": "quick",
+            "side_preference": "for",
+            "scheduled_at": (utcnow() + timedelta(hours=1)).isoformat(),
+            "opponent_id": pair.a_id,
+        },
+    )
+    assert across.status_code == 404
+    invite = await challenge(pair, opponent_id=None)
+    claimed = await pair.client.get(f"/v1/challenges/code/{invite['code']}", headers=young)
+    assert claimed.status_code == 404

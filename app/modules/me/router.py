@@ -5,7 +5,7 @@ from datetime import date, datetime
 from typing import Literal
 
 from fastapi import APIRouter, HTTPException, Request, status
-from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator
 from sqlalchemy import delete, or_, select, update
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 
@@ -17,6 +17,8 @@ from app.models import (
     Block,
     Challenge,
     ChallengeStatus,
+    CodePurpose,
+    ConsentStatus,
     EmailCode,
     LiveEvent,
     LiveResult,
@@ -31,6 +33,7 @@ from app.models.base import utcnow
 from app.modules.auth import service
 from app.modules.auth.deps import CurrentStudent, Session
 from app.modules.auth.schemas import Experience, birth_year_from_age, clean_username
+from app.modules.me import safety
 from app.modules.me.ladder import Ladder, build_debate_skill_ladder
 from app.web import debates as web_debates
 from app.web import users
@@ -53,6 +56,8 @@ class MeOut(BaseModel):
     member_since: datetime
     rank: int
     rank_tier: str
+    consent_status: str
+    parent_email: str | None
 
 
 class MePatch(BaseModel):
@@ -103,7 +108,59 @@ def _me(student_user: users.WebUser, profile: Profile) -> MeOut:
         member_since=student_user.created_at,
         rank=student_user.current_rank,
         rank_tier=student_user.rank_tier,
+        consent_status=consent_status(profile),
+        parent_email=profile.parent_email,
     )
+
+
+def consent_status(profile: Profile) -> str:
+    """The app's view: 'confirmed', 'not_needed' (18+ or age unknown), or 'pending'."""
+    if profile.consent_status == ConsentStatus.GRANTED:
+        return "confirmed"
+    return "pending" if safety.needs_consent(profile) else "not_needed"
+
+
+class ConsentIn(BaseModel):
+    parent_email: EmailStr
+
+
+class ConsentCodeIn(BaseModel):
+    code: str = Field(min_length=6, max_length=6, pattern=r"^\d{6}$")
+
+
+@router.post("/me/consent")
+async def request_consent(body: ConsentIn, student: CurrentStudent, session: Session) -> MeOut:
+    """Email a code to a parent or guardian; the student enters it once the parent agrees."""
+    await ratelimit.hit(f"consent:{student.id}", limit=5, per_seconds=60 * 60)
+    await ratelimit.hit(f"consent-day:{student.id}", limit=10, per_seconds=24 * 60 * 60)
+    parent = str(body.parent_email).strip().lower()
+    if parent == student.user.email.strip().lower():
+        raise HTTPException(
+            status.HTTP_422_UNPROCESSABLE_CONTENT,
+            detail={
+                "message": "Use your parent's or guardian's email, not your own.",
+                "code": "invalid_input",
+            },
+        )
+    student.profile.parent_email = parent
+    if student.profile.consent_status != ConsentStatus.GRANTED:
+        student.profile.consent_status = ConsentStatus.PENDING
+    await service.send_code(session, student.user, CodePurpose.PARENT_CONSENT, to=parent)
+    await session.commit()
+    return _me(student.user, student.profile)
+
+
+@router.post("/me/consent/confirm")
+async def confirm_consent(body: ConsentCodeIn, student: CurrentStudent, session: Session) -> MeOut:
+    await ratelimit.hit(f"consent-code:{student.id}", limit=10, per_seconds=15 * 60)
+    try:
+        await service.use_code(session, student.user, CodePurpose.PARENT_CONSENT, body.code)
+    except service.AuthError as error:
+        raise HTTPException(error.status, detail={"message": str(error), "code": error.code}) from error
+    student.profile.consent_status = ConsentStatus.GRANTED
+    student.profile.consent_at = utcnow()
+    await session.commit()
+    return _me(student.user, student.profile)
 
 
 @router.get("/me")

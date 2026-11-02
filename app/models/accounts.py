@@ -21,7 +21,7 @@ class AppStatus(StrEnum):
 
 
 class ConsentStatus(StrEnum):
-    """Parental consent (India's DPDP Act). Not enforced yet; recorded so it can be switched on later."""
+    """Parental consent (India's DPDP Act): under-18s need it before live 1:1 debates with other students."""
 
     NOT_REQUIRED = "not_required"
     PENDING = "pending"
@@ -44,6 +44,9 @@ class Profile(Timestamped, Base):
     app_status: Mapped[AppStatus] = mapped_column(String(16), default=AppStatus.ACTIVE)
     suspended_reason: Mapped[str | None] = mapped_column(Text)
     consent_status: Mapped[ConsentStatus] = mapped_column(String(16), default=ConsentStatus.NOT_REQUIRED)
+    # The parent or guardian who received the consent code, and when they confirmed.
+    parent_email: Mapped[str | None] = mapped_column(String(254))
+    consent_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     last_seen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
@@ -68,6 +71,7 @@ class RefreshToken(Base):
 class CodePurpose(StrEnum):
     VERIFY_EMAIL = "verify_email"
     RESET_PASSWORD = "reset_password"  # noqa: S105 - a purpose name, not a password
+    PARENT_CONSENT = "parent_consent"
 
 
 class EmailCode(Base):
