@@ -10,3 +10,4 @@ __pycache__/
 admin/node_modules/
 admin/dist/
 app/static/admin/
+.vercel/
