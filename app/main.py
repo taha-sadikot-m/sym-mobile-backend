@@ -26,6 +26,7 @@ from app.modules.auth.router import router as auth_router
 from app.modules.catalog.router import router as catalog_router
 from app.modules.debates.router import router as debates_router
 from app.modules.health.router import router as health_router
+from app.modules.jobs.router import router as jobs_router
 from app.modules.legal.router import router as legal_router
 from app.modules.live.router import router as live_router
 from app.modules.me.router import router as me_router
@@ -122,6 +123,7 @@ def create_app() -> FastAPI:
     app.include_router(debates_router)
     app.include_router(auth_router)
     app.include_router(health_router)
+    app.include_router(jobs_router)
     app.include_router(legal_router)
     app.include_router(admin_auth_router)
     app.include_router(admin_system_router)

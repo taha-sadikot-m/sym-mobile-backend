@@ -40,6 +40,8 @@ class Settings(BaseSettings):
     email_from_name: str = "Speak Your Mind"
     # Shown on the Privacy Policy and Terms pages; leave empty to point to the SYM website instead.
     support_email: str = ""
+    # Lets an outside scheduler call POST /v1/jobs/run (Authorization: Bearer <secret>); empty turns it off.
+    cron_secret: str = ""
 
     # Outside services; features that need them fall back gracefully when a key is missing.
     gemini_api_key: str = ""
