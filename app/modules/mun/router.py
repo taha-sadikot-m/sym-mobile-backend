@@ -1,4 +1,5 @@
-"""MUN single player for the app: AI opponents, transcription, speech analysis, POIs, feedback, history.
+"""MUN single player for the app: AI opponents, transcription, speech analysis, POIs, feedback, the
+phone's report explained in the comfort language, and history.
 
 Every AI endpoint answers 503 with code "ai_unavailable" when the AI can't help (no key, outage, odd
 answer); the app then uses its built-in coach for that step, so a session never gets stuck.
@@ -14,7 +15,7 @@ from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import select
 from sqlalchemy.dialects.postgresql import insert
 
-from app.ai import deepgram
+from app.ai import comfort, deepgram
 from app.ai.gemini import AiUnavailable
 from app.core import ratelimit
 from app.models import Agenda, Committee, CommitteeSeat, ContentStatus, Country, SeatRule
@@ -265,6 +266,9 @@ class FeedbackOut(BaseModel):
     questionable_claims: list[str]
     references: list[str]
     improvement_actions: list[str]
+    language: comfort.ComfortLanguage = Field(
+        "en", description="The comfort language strengths, improvements and practice steps are written in"
+    )
 
 
 LABELS = {
@@ -290,6 +294,7 @@ async def _frameworks(session: Session, slug: str | None, agenda: str) -> list[s
 @router.post("/feedback")
 async def feedback(body: FeedbackIn, student: CurrentStudent, session: Session) -> FeedbackOut:
     await _limit(student.id, "feedback", 40)
+    language = comfort.normalise(student.profile.comfort_language)
     try:
         result = await ai.write_feedback(
             committee=body.committee,
@@ -300,6 +305,7 @@ async def feedback(body: FeedbackIn, student: CurrentStudent, session: Session) 
             pois=[point.model_dump() for point in body.points],
             frameworks=await _frameworks(session, body.committee_slug, body.agenda),
             user_id=student.id,
+            language=language,
         )
     except AiUnavailable as error:
         raise _unavailable(error) from error
@@ -312,6 +318,77 @@ async def feedback(body: FeedbackIn, student: CurrentStudent, session: Session) 
         questionable_claims=result.questionable_claims[:6],
         references=result.references,
         improvement_actions=result.improvement_actions,
+        language=language,
+    )
+
+
+# ---------- The phone's report in the comfort language ----------
+
+ExplainId = Annotated[str, Field(min_length=1, max_length=64, pattern=r"^[\w.:-]+$")]
+
+
+class ExplainItemIn(BaseModel):
+    id: ExplainId
+    text: str = Field(max_length=600, description="A coaching note from the phone's report, in English")
+
+
+class ExplainPhraseIn(BaseModel):
+    id: ExplainId
+    quote: str = Field(max_length=600, description="What the student said")
+    rewrite: str = Field(max_length=600, description="The better English version (returned unchanged)")
+
+
+class ExplainIn(BaseModel):
+    items: list[ExplainItemIn] = Field(default_factory=list, max_length=40)
+    phrases: list[ExplainPhraseIn] = Field(default_factory=list, max_length=20)
+
+    @field_validator("items", "phrases")
+    @classmethod
+    def _unique(cls, value: list[ExplainItemIn] | list[ExplainPhraseIn]) -> Any:
+        if len({item.id for item in value}) != len(value):
+            raise ValueError("Ids must be unique.")
+        return value
+
+
+class ExplainedItemOut(BaseModel):
+    id: str
+    text: str = Field(description="In the comfort language (unchanged for English)")
+
+
+class PhraseMeaningOut(BaseModel):
+    id: str
+    meaning: str | None = Field(description="The rewrite's meaning in the comfort language; null for English")
+
+
+class ExplainOut(BaseModel):
+    items: list[ExplainedItemOut]
+    phrases: list[PhraseMeaningOut]
+    language: comfort.ComfortLanguage
+
+
+@router.post("/explain")
+async def explain_report(body: ExplainIn, student: CurrentStudent) -> ExplainOut:
+    """The phone builds the MUN report itself; this puts its coaching notes in the student's comfort language
+    and gives the meaning of each better phrase (which stays English). English students get their text back
+    with no AI call. Doesn't count toward the daily limits (only a guard against runaway use).
+    """
+    await _limit(student.id, "explain", 100)
+    language = comfort.normalise(student.profile.comfort_language)
+    items = [(item.id, item.text) for item in body.items if item.text.strip()]
+    phrases = [(phrase.id, phrase.quote, phrase.rewrite) for phrase in body.phrases if phrase.rewrite.strip()]
+    texts: dict[str, str] = {}
+    meanings: dict[str, str | None] = {}
+    if language != "en" and (items or phrases):
+        try:
+            texts, meanings = await ai.explain(
+                items=items, phrases=phrases, language=language, user_id=student.id
+            )
+        except AiUnavailable as error:
+            raise _unavailable(error) from error
+    return ExplainOut(
+        items=[ExplainedItemOut(id=item.id, text=texts.get(item.id, item.text)) for item in body.items],
+        phrases=[PhraseMeaningOut(id=phrase.id, meaning=meanings.get(phrase.id)) for phrase in body.phrases],
+        language=language,
     )
 
 

@@ -7,11 +7,12 @@ import pytest
 from pydantic import BaseModel
 from sqlalchemy import func, select
 
-from app.ai import deepgram
+from app.ai import comfort, deepgram
 from app.core.db import SessionLocal
 from app.main import app
 from app.models import AiCall
 from app.modules.mun import ai
+from tests.test_chanakya_api import set_language
 from tests.test_student_auth import auth, signed_up_and_verified
 
 pytestmark = pytest.mark.usefixtures("seeded")
@@ -291,3 +292,152 @@ async def test_dashboard_insights_add_up(
     assert (usage["calls_today"], usage["failures_today"]) == (2, 1)
     # 1M input at $0.30 + 0.1M output at $2.50 + 10 min at $0.0077
     assert usage["cost_today_usd"] == round(0.30 + 0.25 + 0.077, 2)
+
+
+# ---------- The comfort language ----------
+
+
+def recording_generate(answers: dict[str, dict[str, Any]], seen: dict[str, dict[str, Any]]) -> Any:
+    async def generate(*, feature: str, shape: type[BaseModel], **kwargs: Any) -> BaseModel:
+        seen[feature] = kwargs
+        if feature not in answers:
+            raise ai.AiUnavailable("no fake answer")
+        return shape.model_validate(answers[feature])
+
+    return generate
+
+
+FEEDBACK_ANSWER = {
+    "categories": [
+        {"id": category, "score": 70, "strengths": ["Nalla"], "improvements": ["Konjam slow"], "evidence": []}
+        for category in ("speechClarity", "foreignPolicy", "research", "poiPerformance")
+    ],
+    "supported_claims": [],
+    "questionable_claims": [],
+    "references": [],
+    "improvement_actions": ["Oru statistic add pannu"],
+}
+
+
+async def test_feedback_follows_the_comfort_language(
+    student: tuple[httpx.AsyncClient, dict[str, str]], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    client, headers = student
+    seen: dict[str, dict[str, Any]] = {}
+    monkeypatch.setattr(ai, "generate", recording_generate({"mun.feedback": FEEDBACK_ANSWER}, seen))
+    body = {**CONTEXT, "text": SPEECH, "duration_ms": 60000}
+
+    english = await client.post("/v1/mun/feedback", headers=headers, json=body)
+    assert english.json()["language"] == "en" and seen["mun.feedback"]["language"] == "en"
+
+    await set_language(client, headers, "ta_latn")
+    tamil = await client.post("/v1/mun/feedback", headers=headers, json=body)
+    assert tamil.status_code == 200, tamil.text
+    assert tamil.json()["language"] == "ta_latn"
+    assert seen["mun.feedback"]["language"] == "ta_latn"
+    assert comfort.rule("ta_latn") in seen["mun.feedback"]["system"]
+
+
+async def test_content_prompts_stay_english(
+    student: tuple[httpx.AsyncClient, dict[str, str]], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    client, headers = student
+    await set_language(client, headers, "hi")
+    seen: dict[str, dict[str, Any]] = {}
+    monkeypatch.setattr(ai, "generate", recording_generate({}, seen))
+    await client.post("/v1/mun/speech-analysis", headers=headers, json={**CONTEXT, "text": SPEECH})
+    assert seen["mun.speech"]["language"] == "en" and "Hindi" not in seen["mun.speech"]["system"]
+
+
+EXPLAIN_BODY = {
+    "items": [
+        {"id": "gsl.weakest", "text": "Diction (52): cut “I think”."},
+        {"id": "action.0", "text": "Add one statistic."},
+        {"id": "blank", "text": "  "},
+    ],
+    "phrases": [
+        {
+            "id": "p0",
+            "quote": "I think we need peace.",
+            "rewrite": "The delegation of India firmly believes that",
+        },
+        {"id": "p1", "quote": "Hello everyone.", "rewrite": "Honourable Chair, fellow delegates,"},
+    ],
+}
+
+
+async def test_explain_returns_english_unchanged_without_calling_the_ai(
+    student: tuple[httpx.AsyncClient, dict[str, str]], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    client, headers = student
+    seen: dict[str, dict[str, Any]] = {}
+    monkeypatch.setattr(ai, "generate", recording_generate({}, seen))
+    response = await client.post("/v1/mun/explain", headers=headers, json=EXPLAIN_BODY)
+    assert response.status_code == 200, response.text
+    assert response.json() == {
+        "items": EXPLAIN_BODY["items"],
+        "phrases": [{"id": "p0", "meaning": None}, {"id": "p1", "meaning": None}],
+        "language": "en",
+    }
+    assert seen == {}
+
+
+async def test_explain_puts_the_report_in_the_comfort_language(
+    student: tuple[httpx.AsyncClient, dict[str, str]], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    client, headers = student
+    await set_language(client, headers, "ta")
+    seen: dict[str, dict[str, Any]] = {}
+    answer = {
+        # Out of order, one item left out, one id the app never sent, a phrase meaning missing.
+        "items": [
+            {"id": "gsl.weakest", "text": "உச்சரிப்பு (52): “I think” என்பதை விடுங்கள்."},
+            {"id": "made.up", "text": "ignored"},
+        ],
+        "phrases": [{"id": "p1", "meaning": "மதிப்பிற்குரிய தலைவர் அவர்களே"}],
+    }
+    monkeypatch.setattr(ai, "generate", recording_generate({"mun.explain": answer}, seen))
+    response = await client.post("/v1/mun/explain", headers=headers, json=EXPLAIN_BODY)
+    body = response.json()
+    assert response.status_code == 200, body
+    assert body["language"] == "ta"
+    assert body["items"] == [
+        {"id": "gsl.weakest", "text": "உச்சரிப்பு (52): “I think” என்பதை விடுங்கள்."},
+        {"id": "action.0", "text": "Add one statistic."},
+        {"id": "blank", "text": "  "},
+    ]
+    assert body["phrases"] == [
+        {"id": "p0", "meaning": None},
+        {"id": "p1", "meaning": "மதிப்பிற்குரிய தலைவர் அவர்களே"},
+    ]
+    call = seen["mun.explain"]
+    assert call["language"] == "ta" and comfort.rule("ta") in call["system"]
+    assert 'id="blank"' not in call["prompt"] and "Honourable Chair, fellow delegates," in call["prompt"]
+
+    # Not one of today's free scored attempts or Chanakya messages.
+    usage = (await client.get("/v1/chanakya/usage", headers=headers)).json()
+    assert usage["scored_attempts"]["used"] == 0 and usage["chat_messages"]["used"] == 0
+
+
+async def test_explain_fails_cleanly_and_checks_its_input(
+    student: tuple[httpx.AsyncClient, dict[str, str]], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    client, headers = student
+    await set_language(client, headers, "hi_latn")
+    monkeypatch.setattr(ai, "generate", recording_generate({}, {}))
+    failed = await client.post("/v1/mun/explain", headers=headers, json=EXPLAIN_BODY)
+    assert failed.status_code == 503 and failed.json()["detail"]["code"] == "ai_unavailable"
+
+    # An answer with none of the items is no answer.
+    empty = {"items": [{"id": "nope", "text": "x"}], "phrases": []}
+    monkeypatch.setattr(ai, "generate", recording_generate({"mun.explain": empty}, {}))
+    assert (await client.post("/v1/mun/explain", headers=headers, json=EXPLAIN_BODY)).status_code == 503
+
+    too_many = {"items": [{"id": f"i{index}", "text": "Tip"} for index in range(41)]}
+    assert (await client.post("/v1/mun/explain", headers=headers, json=too_many)).status_code == 422
+    too_long = {"items": [{"id": "i0", "text": "x" * 601}]}
+    assert (await client.post("/v1/mun/explain", headers=headers, json=too_long)).status_code == 422
+    twice = {"items": [{"id": "i0", "text": "a"}, {"id": "i0", "text": "b"}]}
+    assert (await client.post("/v1/mun/explain", headers=headers, json=twice)).status_code == 422
+    phrases = {"phrases": [{"id": f"p{index}", "quote": "a", "rewrite": "b"} for index in range(21)]}
+    assert (await client.post("/v1/mun/explain", headers=headers, json=phrases)).status_code == 422

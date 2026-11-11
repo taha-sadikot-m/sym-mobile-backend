@@ -21,6 +21,7 @@ FEATURES: dict[str, str] = {
     "mun.speech": "MUN — reading the opening speech",
     "mun.pois": "MUN — Points of Information questions",
     "mun.feedback": "MUN — the feedback report",
+    "mun.explain": "MUN — the phone's report explained in the comfort language",
     "debate.reply": "Debate vs AI — the AI opponent’s turns",
     "debate.analysis": "Debate vs AI — the analysis report",
     "live.judge": "Live 1:1 — the judge and personal reports",
