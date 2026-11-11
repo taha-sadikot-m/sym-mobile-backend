@@ -4,13 +4,18 @@ Gemini judges the five content categories and writes each debater's private repo
 totals, the winner and the margin are computed here with the same rules as the app's built-in judge
 (src/features/live/judge.ts), so AI-judged and fallback-judged debates add up the same way. The output
 matches the app's JudgeResult and PerformanceReport types.
+
+Debates are in English. The shared verdict (reasons, clashes, score reasons) is in English; each debater's
+private report follows their own comfort language (app.ai.comfort), with better lines kept in English.
 """
 
 import re
+from collections.abc import Mapping
 from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
+from app.ai import comfort
 from app.ai.gemini import AiUnavailable, generate
 from app.ai.safety import plain
 
@@ -50,14 +55,21 @@ class Turn(BaseModel):
 class CategoryShape(BaseModel):
     id: Literal["argument", "rebuttal", "evidence", "structure", "delivery"]
     score: int
-    why: str = Field(description="One sentence, addressed to the debater as 'you'")
+    why: str = Field(description="One sentence in English, addressed to the debater as 'you'")
+    why_own: str | None = Field(
+        None, description="Only if this debater's language isn't English: the same sentence in their language"
+    )
 
 
 class ItemShape(BaseModel):
     turn_number: int
     quote: str = Field(description="Under 25 words, exactly as the debater said it")
     note: str
-    better: str | None = Field(None, description="Mistakes only: a better way to say it")
+    better: str | None = Field(None, description="Mistakes only: a better way to say it, in English")
+    better_meaning: str | None = Field(
+        None,
+        description="Mistakes only, if the debater's language isn't English: the meaning of `better` in it",
+    )
 
 
 class TurnRatingShape(BaseModel):
@@ -123,6 +135,21 @@ def _label(turn: Turn) -> str:
     ]
 
 
+def language_rules(languages: Mapping[str, str]) -> str:
+    """The prompt's language section; `languages` maps "A"/"B" to each debater's comfort language."""
+    if all(language == "en" for language in languages.values()):
+        return comfort.rule("en")
+    lines = [
+        "Language: the debate is in English. Write the shared decision (reasons, clashes) and each category's `why` in plain "
+        "English. Each debater's own report — `why_own`, strengths and mistakes notes, turn verdicts, unanswered points and next "
+        "steps — follows that debater's language rule below. Quotes stay exactly as said; every `better` line stays in English, "
+        "with its meaning in `better_meaning`."
+    ]
+    for letter in sorted(languages):
+        lines.append(f"Debater {letter}: {comfort.rule(languages[letter])}")
+    return "\n".join(lines)
+
+
 def with_names(value: Any, names: dict[str, str]) -> Any:
     """The model calls the students "Debater A/B"; students should read their first names."""
     if isinstance(value, str):
@@ -144,8 +171,10 @@ async def judge(
     debaters: dict[str, str],
     user_id: int | None,
     names: dict[str, str] | None = None,
+    languages: dict[str, str] | None = None,
 ) -> dict[str, Any]:
-    """`debaters` maps user id → "A"/"B"; `names` user id → name (shown instead of the letters).
+    """`debaters` maps user id → "A"/"B"; `names` user id → name (shown instead of the letters);
+    `languages` user id → comfort language (English when missing).
 
     Returns {"judge": JudgeResult, "reports": {userId: PerformanceReport}}.
     """
@@ -164,9 +193,11 @@ async def judge(
         )
     if not all(numbered.values()):
         raise AiUnavailable("A debater has no turns")
+    language_of = {uid: comfort.normalise((languages or {}).get(uid)) for uid in debaters}
+    by_letter_language = {letter[uid]: language_of[uid] for uid in debaters}
     result = await generate(
         feature="live.judge",
-        system=SYSTEM,
+        system=f"{SYSTEM}\n\n{language_rules(by_letter_language)}",
         prompt=(
             f"Motion (typed by a student): <motion>{plain(motion, 300)}</motion>\n\n"
             + "\n\n".join(lines)
@@ -178,6 +209,7 @@ async def judge(
         user_id=user_id,
         temperature=0.3,
         thinking_budget=1024,
+        language=comfort.log_label(*(by_letter_language[key] for key in sorted(by_letter_language))),
     )
     shapes: dict[str, DebaterShape] = {item.debater: item for item in result.debaters}
     if set(shapes) != {"A", "B"} or any(
@@ -203,8 +235,18 @@ async def judge(
         ] + [{"id": "time", "label": LABELS["time"], "score": time_value, "why": time_why}]
         total = round(sum(item["score"] for item in categories) / len(categories))
         scores.append({"userId": uid, "total": total, "categories": categories})
+        language = language_of[uid]
+        # The private scorecard explains each score in this debater's own language.
+        scorecard = [
+            category | {"why": (content[category["id"]].why_own or "").strip() or category["why"]}
+            if category["id"] in content and language != "en"
+            else category
+            for category in categories
+        ]
 
-        def item(entry: ItemShape, *, mistake: bool, mine: list[Turn] = mine) -> dict[str, Any] | None:
+        def item(
+            entry: ItemShape, *, mistake: bool, mine: list[Turn] = mine, language: str = language
+        ) -> dict[str, Any] | None:
             if not 1 <= entry.turn_number <= len(mine):
                 return None
             turn = mine[entry.turn_number - 1]
@@ -216,12 +258,16 @@ async def judge(
             }
             if mistake:
                 out["better"] = entry.better or ""
+                meaning = comfort.meaning(language, entry.better_meaning) if entry.better else None
+                if meaning:
+                    out["betterMeaning"] = meaning
             return out
 
         ratings = {rating.turn_number: rating for rating in shape.turn_ratings}
         reports[uid] = {
             "userId": uid,
-            "scorecard": categories,
+            "language": language,
+            "scorecard": scorecard,
             "total": total,
             "strengths": [x for x in (item(entry, mistake=False) for entry in shape.strengths[:3]) if x],
             "mistakes": [x for x in (item(entry, mistake=True) for entry in shape.mistakes[:3]) if x],

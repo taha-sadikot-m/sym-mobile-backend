@@ -4,6 +4,7 @@ from typing import Literal, Self
 
 from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator
 
+from app.ai.comfort import ComfortLanguage
 from app.core.password_rules import problems
 
 Experience = Literal["beginner", "intermediate", "advanced"]
@@ -49,6 +50,7 @@ class SignUpIn(BaseModel):
     city: str = Field("", max_length=80)
     country: str = Field("", max_length=80)
     mun_experience: Experience | None = None
+    comfort_language: ComfortLanguage = "en"
 
     _username = field_validator("username")(clean_username)
 

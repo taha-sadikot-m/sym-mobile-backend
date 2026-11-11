@@ -1,4 +1,4 @@
-"""1:1 debate against the AI for the app: opponent turns, analysis, and saving to the website's history."""
+"""MyDebate for the app: the prep screen, the AI opponent, analysis, and saving to the website's history."""
 
 import json
 import uuid
@@ -9,6 +9,7 @@ from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import select
 
+from app.ai import comfort
 from app.ai.gemini import AiUnavailable
 from app.core import ratelimit, signing
 from app.core.config import get_settings
@@ -96,6 +97,8 @@ class MomentOut(BaseModel):
     kind: Literal["best", "weakest"]
     quote: str
     note: str
+    better: str | None = Field(None, description="Weakest moment: a stronger way to say it (English)")
+    meaning: str | None = Field(None, description="The meaning of `better` in the comfort language")
 
 
 class AnalysisOut(BaseModel):
@@ -109,6 +112,9 @@ class AnalysisOut(BaseModel):
     next_steps: list[str]
     seal: str = Field(
         "", description="Server signature over the scores and verdict; send it back when saving"
+    )
+    language: comfort.ComfortLanguage = Field(
+        "en", description="The comfort language the explanations are written in"
     )
 
 
@@ -133,6 +139,7 @@ def verdict(overall: int, opponent: int) -> Literal["won", "close", "lost"]:
 @router.post("/ai/analysis")
 async def ai_analysis(body: AnalysisIn, student: CurrentStudent) -> AnalysisOut:
     await ratelimit.hit(f"ai:debate-analysis:{student.id}", limit=40, per_seconds=DAY)
+    language = comfort.normalise(student.profile.comfort_language)
     try:
         result = await ai.analyse(
             motion=body.topic.title,
@@ -140,6 +147,7 @@ async def ai_analysis(body: AnalysisIn, student: CurrentStudent) -> AnalysisOut:
             difficulty=body.difficulty,
             turns=list(body.turns),
             user_id=student.id,
+            language=language,
         )
     except AiUnavailable as error:
         raise _unavailable() from error
@@ -168,6 +176,46 @@ async def ai_analysis(body: AnalysisIn, student: CurrentStudent) -> AnalysisOut:
         key_moments=[MomentOut.model_validate(item.model_dump()) for item in result.key_moments],
         missed_arguments=result.missed_arguments[:3],
         next_steps=result.next_steps[:4],
+        language=language,
+    )
+
+
+# ---------- The 60-second prep screen ----------
+
+
+class PrepIn(BaseModel):
+    motion: str = Field(min_length=5, max_length=300)
+    side: ai.Side
+
+
+class HintOut(BaseModel):
+    point: str
+    why: str
+
+
+class PrepOut(BaseModel):
+    explanation: str = Field(description="In the comfort language")
+    hints: list[HintOut] = Field(description="Three 'Build your case' hints, in the comfort language")
+    explanation_en: str
+    hints_en: list[HintOut]
+    language: comfort.ComfortLanguage
+
+
+@router.post("/prep")
+async def prep(body: PrepIn, student: CurrentStudent) -> PrepOut:
+    """The motion explained and three hints for your side, also in English (the "Show in English" toggle)."""
+    await ratelimit.hit(f"ai:debate-prep:{student.id}", limit=100, per_seconds=DAY)
+    language = comfort.normalise(student.profile.comfort_language)
+    try:
+        result = await ai.prep(motion=body.motion, side=body.side, language=language, user_id=student.id)
+    except AiUnavailable as error:
+        raise _unavailable() from error
+    return PrepOut(
+        explanation=result.explanation,
+        hints=[HintOut(point=item.point, why=item.why) for item in result.hints],
+        explanation_en=result.explanation_en,
+        hints_en=[HintOut(point=item.point, why=item.why) for item in result.hints_en],
+        language=language,
     )
 
 

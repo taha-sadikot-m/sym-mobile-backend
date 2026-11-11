@@ -24,6 +24,10 @@ FEATURES: dict[str, str] = {
     "debate.reply": "Debate vs AI — the AI opponent’s turns",
     "debate.analysis": "Debate vs AI — the analysis report",
     "live.judge": "Live 1:1 — the judge and personal reports",
+    "debate.prep": "MyDebate — the 60-second prep screen (motion explained, “Build your case” hints)",
+    "chanakya.reply": "Chanakya — chat replies",
+    "chanakya.brief": "Chanakya — the “Before you record” card",
+    "chanakya.score": "Chanakya — scoring a practice attempt (content, tip, better line, grammar)",
 }
 
 

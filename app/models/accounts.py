@@ -41,6 +41,8 @@ class Profile(Timestamped, Base):
     city: Mapped[str] = mapped_column(String(80), default="")
     country: Mapped[str] = mapped_column(String(80), default="")
     mun_experience: Mapped[str | None] = mapped_column(String(16))  # beginner / intermediate / advanced
+    # The language explanations come in (app.ai.comfort): en / ta / ta_latn / hi / hi_latn.
+    comfort_language: Mapped[str] = mapped_column(String(8), default="en", server_default="en")
     app_status: Mapped[AppStatus] = mapped_column(String(16), default=AppStatus.ACTIVE)
     suspended_reason: Mapped[str | None] = mapped_column(Text)
     consent_status: Mapped[ConsentStatus] = mapped_column(String(16), default=ConsentStatus.NOT_REQUIRED)

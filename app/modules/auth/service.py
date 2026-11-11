@@ -203,6 +203,7 @@ async def sign_up(
     city: str,
     country: str,
     mun_experience: str | None = None,
+    comfort_language: str = "en",
 ) -> WebUser:
     if await users.email_taken(session, email):
         raise AuthError(
@@ -224,6 +225,7 @@ async def sign_up(
             city=city.strip(),
             country=country.strip(),
             mun_experience=mun_experience,
+            comfort_language=comfort_language,
         )
     )
     user = await users.by_id(session, user_id)

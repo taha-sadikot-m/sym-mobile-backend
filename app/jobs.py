@@ -6,7 +6,7 @@ Each job records a row in mobile.job_runs. The clean-up runs at most once a day.
 What the clean-up removes (the retention rules in docs/DATA_AND_PRIVACY.md):
 - sign-in codes a day after they expire; sign-in sessions 30 days after they end
 - rate-limit counters after 2 days; admin sessions 30 days after they end
-- notification log after 90 days; AI usage log after 400 days
+- notification log after 90 days; AI usage log after 400 days; daily free-limit counters after 30 days
 - unanswered challenges are marked expired once their 48 hours pass
 No audio is ever stored, so there is none to delete.
 """
@@ -19,7 +19,16 @@ from typing import Any
 from sqlalchemy import delete, or_, select, update
 
 from app.core.db import SessionLocal, engine
-from app.models import AdminSession, AiCall, EmailCode, JobRun, Notification, RateLimit, RefreshToken
+from app.models import (
+    AdminSession,
+    AiCall,
+    EmailCode,
+    JobRun,
+    Notification,
+    RateLimit,
+    RefreshToken,
+    UsageDaily,
+)
 from app.models.base import utcnow
 from app.models.live import Challenge, ChallengeStatus
 from app.modules.live import alerts
@@ -84,6 +93,7 @@ async def clean_up() -> dict[str, Any]:
             ),
             "notifications": delete(Notification).where(Notification.created_at < now - timedelta(days=90)),
             "ai_calls": delete(AiCall).where(AiCall.created_at < now - timedelta(days=400)),
+            "usage_daily": delete(UsageDaily).where(UsageDaily.day < (now - timedelta(days=30)).date()),
             "challenges_expired": update(Challenge)
             .where(
                 Challenge.status.in_([ChallengeStatus.PENDING, ChallengeStatus.COUNTERED]),

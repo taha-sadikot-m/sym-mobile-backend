@@ -674,6 +674,9 @@ async def judge_room(
                 debaters={str(challenge.challenger_id): "A", str(challenge.opponent_id): "B"},
                 user_id=student.id,
                 names=names,
+                languages=await service.comfort_languages(
+                    session, {challenge.challenger_id, challenge.opponent_id}
+                ),
             )
             verdict, reports, by = judged["judge"], judged["reports"], "ai"
         except AiUnavailable:

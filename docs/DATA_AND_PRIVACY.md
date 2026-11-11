@@ -16,7 +16,8 @@ Privacy Policy (`/privacy`, source `app/legal/privacy.html`) must stay consisten
 | Reports and blocks | `mobile.user_reports`, `mobile.blocks` | For moderation. |
 | Push tokens | `mobile.push_tokens` | Removed on sign-out, when notifications are switched off, or when Expo says the device is gone. |
 | Notification log | `mobile.notifications` | Title, body, delivery counts. |
-| AI usage (no transcripts: tokens, seconds, time, success) | `mobile.ai_calls` | For cost and reliability. |
+| AI usage (no transcripts: tokens, seconds, time, success, answer language) | `mobile.ai_calls` | For cost and reliability. |
+| Daily free-limit counters (scored attempts, Chanakya messages) | `mobile.usage_daily` | Counts only, per India day. |
 | Admin audit log | `mobile.audit_log` | Who changed what, from which IP. |
 
 **Audio is never stored.** Recordings go from the phone to Deepgram for transcription and are discarded. Live voice
@@ -26,7 +27,7 @@ goes through LiveKit in real time without recording.
 
 | Processor | Purpose | Data |
 |---|---|---|
-| Google (Gemini API) | Feedback, Points of Information, opponent, judge | Transcripts, topic, country |
+| Google (Gemini API) | Feedback, Points of Information, opponent, judge, Chanakya coaching | Transcripts, chat messages, topic, country, comfort language |
 | Deepgram | Speech to text | Audio (not retained by us) |
 | LiveKit | Live debate voice | Real-time audio |
 | Neon | Database | Everything above |
@@ -46,6 +47,7 @@ The clean-up job (`app/jobs.py`, daily) enforces:
 | Admin sessions | 30 days after expiry or revocation |
 | Notification log | 90 days |
 | AI usage log | 400 days |
+| Daily free-limit counters | 30 days |
 | Unanswered challenges | marked expired after 48 hours |
 | Accounts and practice history | until the student deletes the account |
 
@@ -56,7 +58,7 @@ Triggered by the student (Profile → Delete account, password required) or by a
 
 - **Deletes:**
   - profile, refresh tokens, email codes, push tokens;
-  - MUN sessions;
+  - MUN sessions and daily free-limit counters;
   - the student's turn transcripts in live debates and their private live reports;
   - blocks (both directions) and reports the student filed;
   - rate-limit counters keyed by their email.

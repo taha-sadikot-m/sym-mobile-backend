@@ -1,8 +1,9 @@
 """Gemini, asked for JSON in a fixed shape and checked against a Pydantic model.
 
-Every call is logged to `mobile.ai_calls` (tokens, time, success) in its own transaction. Callers get an
-`AiUnavailable` error when the key is missing, the service fails twice, or the answer doesn't fit the
-shape — and fall back to the built-in heuristics, so students are never stuck waiting on AI.
+Every call is logged to `mobile.ai_calls` (tokens, time, success, the language it answered in) in its own
+transaction. Callers get an `AiUnavailable` error when the key is missing, the service fails twice, or the
+answer doesn't fit the shape — and fall back to the built-in heuristics, so students are never stuck
+waiting on AI.
 """
 
 import json
@@ -64,8 +65,14 @@ async def generate[T: BaseModel](
     user_id: int | None = None,
     temperature: float = 0.4,
     thinking_budget: int = 0,
+    language: str | None = None,
+    timeout_seconds: float = TIMEOUT_SECONDS,
 ) -> T:
-    """`thinking_budget` 0 answers fastest; a few hundred tokens helps careful judgement (e.g. scoring)."""
+    """`thinking_budget` 0 answers fastest; a few hundred tokens helps careful judgement (e.g. scoring).
+
+    `language` is only logged (the prompt carries the language rule); `timeout_seconds` is per attempt
+    (there are two attempts).
+    """
     settings = get_settings()
     if not settings.gemini_api_key:
         raise AiUnavailable("No Gemini key configured")
@@ -88,7 +95,7 @@ async def generate[T: BaseModel](
         started = time.perf_counter()
         usage: dict[str, Any] = {}
         try:
-            async with httpx.AsyncClient(timeout=TIMEOUT_SECONDS) as client:
+            async with httpx.AsyncClient(timeout=timeout_seconds) as client:
                 response = await client.post(
                     url, headers={"x-goog-api-key": settings.gemini_api_key}, json=body
                 )
@@ -106,6 +113,7 @@ async def generate[T: BaseModel](
                 input_tokens=usage.get("promptTokenCount", 0),
                 output_tokens=usage.get("candidatesTokenCount", 0),
                 latency_ms=int((time.perf_counter() - started) * 1000),
+                language=language,
             )
             return result
         except (
@@ -128,5 +136,6 @@ async def generate[T: BaseModel](
                 latency_ms=int((time.perf_counter() - started) * 1000),
                 ok=False,
                 error=last_error[:300],
+                language=language,
             )
     raise AiUnavailable(last_error)

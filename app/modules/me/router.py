@@ -9,6 +9,7 @@ from pydantic import BaseModel, EmailStr, Field, field_validator, model_validato
 from sqlalchemy import delete, or_, select, update
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 
+from app.ai.comfort import ComfortLanguage, normalise
 from app.core import ratelimit
 from app.core.password_rules import problems
 from app.models import (
@@ -27,6 +28,7 @@ from app.models import (
     PushToken,
     RateLimit,
     RefreshToken,
+    UsageDaily,
     UserReport,
 )
 from app.models.base import utcnow
@@ -58,6 +60,7 @@ class MeOut(BaseModel):
     rank_tier: str
     consent_status: str
     parent_email: str | None
+    comfort_language: ComfortLanguage
 
 
 class MePatch(BaseModel):
@@ -68,6 +71,7 @@ class MePatch(BaseModel):
     city: str | None = Field(None, max_length=80)
     country: str | None = Field(None, max_length=80)
     mun_experience: Experience | None = None
+    comfort_language: ComfortLanguage | None = None
 
     _username = field_validator("username")(clean_username)
 
@@ -110,6 +114,7 @@ def _me(student_user: users.WebUser, profile: Profile) -> MeOut:
         rank_tier=student_user.rank_tier,
         consent_status=consent_status(profile),
         parent_email=profile.parent_email,
+        comfort_language=normalise(profile.comfort_language),
     )
 
 
@@ -248,6 +253,8 @@ async def update_me(body: MePatch, student: CurrentStudent, session: Session) ->
             setattr(profile, field, values[field].strip())
     if values.get("mun_experience"):
         profile.mun_experience = values["mun_experience"]
+    if values.get("comfort_language"):
+        profile.comfort_language = values["comfort_language"]
     if values.get("full_name"):
         # The name lives on the shared account, so it changes on the website too.
         await users.set_fields(session, student.id, full_name=values["full_name"].strip())
@@ -308,16 +315,18 @@ async def delete_account(body: DeleteIn, request: Request, student: CurrentStude
 async def erase_student(session: Session, user_id: int, *, requested_by: str) -> None:
     """Remove personal data for a student (shared with the admin console's delete action).
 
-    Deleted: profile, sign-in tokens and codes, MUN sessions, their spoken turns in live debates, their
-    private live reports, blocks, reports they filed, rate-limit counters keyed by their email. Anonymised:
-    the shared `users` row (kept because website history points to it), their messages in the website's
-    debate transcripts (emptied with UPDATE — this backend never deletes website rows), AI usage rows.
+    Deleted: profile, sign-in tokens and codes, MUN sessions, daily usage counters, their spoken turns in
+    live debates, their private live reports, blocks, reports they filed, rate-limit counters keyed by their
+    email. Anonymised: the shared `users` row (kept because website history points to it), their messages in
+    the website's debate transcripts (emptied with UPDATE — this backend never deletes website rows), AI
+    usage rows.
     Reports *about* them are kept for the moderation record.
     """
     old_email = await session.scalar(select(users.users.c.email).where(users.users.c.id == user_id))
     uid = str(user_id)
     await session.execute(delete(MunSession).where(MunSession.user_id == user_id))
     await session.execute(delete(PushToken).where(PushToken.user_id == user_id))
+    await session.execute(delete(UsageDaily).where(UsageDaily.user_id == user_id))
     await session.execute(delete(LiveEvent).where(LiveEvent.user_id == user_id, LiveEvent.kind == "turn"))
     await session.execute(
         update(LiveResult)

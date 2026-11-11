@@ -23,6 +23,10 @@ COACH = (
 )
 
 
+# MUN coaching is written in English for now; logged as such in the AI usage log.
+LANGUAGE = "en"
+
+
 def _speech(text: str) -> str:
     return f"<speech>\n{plain(text, 6000)}\n</speech>"
 
@@ -65,6 +69,7 @@ async def pick_opponents(
         ),
         shape=OpponentsShape,
         user_id=user_id,
+        language=LANGUAGE,
         temperature=0.5,
     )
     picks = result.opponents
@@ -113,6 +118,7 @@ async def analyse_speech(
         ),
         shape=SpeechShape,
         user_id=user_id,
+        language=LANGUAGE,
         temperature=0.2,
     )
     if not result.arguments or not result.claims:
@@ -166,6 +172,7 @@ async def write_pois(
         ),
         shape=PoisShape,
         user_id=user_id,
+        language=LANGUAGE,
         temperature=0.6,
     )
     expected = [item["code"].lower() for item in opponents]
@@ -268,6 +275,7 @@ async def write_feedback(
         ),
         shape=FeedbackShape,
         user_id=user_id,
+        language=LANGUAGE,
         temperature=0.3,
         thinking_budget=512,
     )

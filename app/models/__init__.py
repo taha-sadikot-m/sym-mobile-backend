@@ -25,7 +25,7 @@ from app.models.content import (
 from app.models.live import Block, Challenge, ChallengeStatus, LiveEvent, LiveResult, ReportStatus, UserReport
 from app.models.mun import MunSession
 from app.models.notify import JobRun, Notification, PushToken
-from app.models.usage import AiCall
+from app.models.usage import AiCall, UsageDaily
 
 __all__ = [
     "MOBILE_SCHEMA",
@@ -63,5 +63,6 @@ __all__ = [
     "ReportStatus",
     "SeatRule",
     "SeatType",
+    "UsageDaily",
     "UserReport",
 ]

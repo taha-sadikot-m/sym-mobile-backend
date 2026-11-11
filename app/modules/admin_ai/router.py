@@ -148,6 +148,7 @@ class CallRow(BaseModel):
     output_tokens: int
     audio_seconds: float
     cost_usd: float
+    language: str | None = None
 
 
 class FeatureStats(BaseModel):
@@ -215,6 +216,7 @@ async def list_calls(
                 input_tokens=row.input_tokens,
                 output_tokens=row.output_tokens,
                 audio_seconds=row.audio_seconds,
+                language=row.language,
                 cost_usd=round(_price(rates, row.input_tokens, row.output_tokens, row.audio_seconds), 5),
             )
             for row in rows

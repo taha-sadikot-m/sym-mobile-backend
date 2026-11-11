@@ -54,6 +54,7 @@ async def sign_up(body: SignUpIn, request: Request, session: Session) -> Pending
             city=body.city,
             country=body.country,
             mun_experience=body.mun_experience,
+            comfort_language=body.comfort_language,
         )
     )
     return PendingOut(email=user.email)

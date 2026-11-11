@@ -128,6 +128,14 @@ async def people(session: AsyncSession, ids: set[int]) -> dict[int, dict[str, st
     }
 
 
+async def comfort_languages(session: AsyncSession, ids: set[int]) -> dict[str, str]:
+    """Each student's comfort language (user id as text, as the judge uses), for their private report."""
+    rows = await session.execute(
+        select(Profile.user_id, Profile.comfort_language).where(Profile.user_id.in_(ids))
+    )
+    return {str(user_id): language for user_id, language in rows}
+
+
 def serialize(challenge: Challenge, who: dict[int, dict[str, str]]) -> dict[str, Any]:
     """The app's Challenge type."""
     unknown = {"id": "", "name": "Waiting for someone to accept", "username": "", "school": ""}

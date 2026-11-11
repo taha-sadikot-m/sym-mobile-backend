@@ -62,6 +62,7 @@ async def transcribe(
             feature=feature,
             model=MODEL,
             user_id=user_id,
+            language="en",
             ok=False,
             error=message[:300],
             latency_ms=int((time.perf_counter() - started) * 1000),
@@ -72,6 +73,7 @@ async def transcribe(
         feature=feature,
         model=MODEL,
         user_id=user_id,
+        language="en",  # English speech only (Tamil and Hindi recognition runs on the phone)
         audio_seconds=seconds,
         latency_ms=int((time.perf_counter() - started) * 1000),
     )
